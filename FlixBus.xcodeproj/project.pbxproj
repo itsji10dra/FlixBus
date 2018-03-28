@@ -17,7 +17,7 @@
 		108558C7206BEDC600601CF7 /* StationsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108558C6206BEDC600601CF7 /* StationsListVC.swift */; };
 		108558C9206BF1F700601CF7 /* TimeTableListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108558C8206BF1F700601CF7 /* TimeTableListVC.swift */; };
 		108558CD206BF27500601CF7 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108558CC206BF27500601CF7 /* Station.swift */; };
-		108558CF206BF2FC00601CF7 /* ServerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108558CE206BF2FC00601CF7 /* ServerConfiguration.swift */; };
+		108558CF206BF2FC00601CF7 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108558CE206BF2FC00601CF7 /* Configuration.swift */; };
 		108558D2206C001C00601CF7 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108558D1206C001C00601CF7 /* Navigation.swift */; };
 		10D4FE67206C1AAE00C22937 /* TimeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D4FE66206C1AAE00C22937 /* TimeTableCell.swift */; };
 		10D4FE69206C240F00C22937 /* TimeTableInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D4FE68206C240F00C22937 /* TimeTableInfo.swift */; };
@@ -60,7 +60,7 @@
 		108558C6206BEDC600601CF7 /* StationsListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsListVC.swift; sourceTree = "<group>"; };
 		108558C8206BF1F700601CF7 /* TimeTableListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableListVC.swift; sourceTree = "<group>"; };
 		108558CC206BF27500601CF7 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
-		108558CE206BF2FC00601CF7 /* ServerConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConfiguration.swift; sourceTree = "<group>"; };
+		108558CE206BF2FC00601CF7 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		108558D1206C001C00601CF7 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		10D4FE66206C1AAE00C22937 /* TimeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableCell.swift; sourceTree = "<group>"; };
 		10D4FE68206C240F00C22937 /* TimeTableInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableInfo.swift; sourceTree = "<group>"; };
@@ -144,7 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				10855898206BED1E00601CF7 /* AppDelegate.swift */,
-				108558CE206BF2FC00601CF7 /* ServerConfiguration.swift */,
+				108558CE206BF2FC00601CF7 /* Configuration.swift */,
 				108558D1206C001C00601CF7 /* Navigation.swift */,
 				108558CA206BF20200601CF7 /* Controllers */,
 				108558CB206BF20F00601CF7 /* Models */,
@@ -519,7 +519,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10855899206BED1E00601CF7 /* AppDelegate.swift in Sources */,
-				108558CF206BF2FC00601CF7 /* ServerConfiguration.swift in Sources */,
+				108558CF206BF2FC00601CF7 /* Configuration.swift in Sources */,
 				10D4FE69206C240F00C22937 /* TimeTableInfo.swift in Sources */,
 				108558C7206BEDC600601CF7 /* StationsListVC.swift in Sources */,
 				10D4FE67206C1AAE00C22937 /* TimeTableCell.swift in Sources */,

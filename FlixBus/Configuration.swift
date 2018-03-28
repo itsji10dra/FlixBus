@@ -1,5 +1,5 @@
 //
-//  ServerConfiguration.swift
+//  Configuration.swift
 //  FlixBus
 //
 //  Created by Jitendra on 28/03/18.
@@ -30,7 +30,7 @@ struct Configuration {
         let parametersReceived = parameters.count
 
         guard parametersRequired == parametersReceived else {
-            fatalError("Wrong number of paramters passed")
+            fatalError("Wrong number of parameters passed")
         }
         
         parameters.forEach { parameter in
