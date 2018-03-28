@@ -34,7 +34,8 @@ class StationsListVC: UIViewController, UITableViewDelegate {
 
         let observableStations: Observable<[Station]> = Observable.just(stations)
     
-        observableStations.bind(to: stationTableView.rx.items(cellIdentifier: "StationCell", cellType: UITableViewCell.self)) { (row, element, cell) in
+        observableStations.bind(to: stationTableView.rx.items(cellIdentifier: "StationCell",
+                                                              cellType: UITableViewCell.self)) { (row, element, cell) in
             cell.textLabel?.text = element.name
         }
         .disposed(by: disposeBag)
@@ -60,12 +61,9 @@ class StationsListVC: UIViewController, UITableViewDelegate {
         
         guard let timeTableVC = Navigation.getViewController(type: TimeTableListVC.self, identifer: "TimeTableList") else { return }
         
-        timeTableVC.station = stations.first!
+        timeTableVC.station = station
         
         navigationController?.pushViewController(timeTableVC, animated: true)
-        
-        print(timeTableVC, station)
     }
-
 }
 

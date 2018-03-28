@@ -5,7 +5,7 @@ inhibit_all_warnings!
 target 'FlixBus' do
 
   #Networking
-  pod 'Alamofire', '~> 4.7'
+  pod 'RxAlamofire'
   pod 'AlamofireNetworkActivityIndicator', '~> 2.2'
 
   #React
