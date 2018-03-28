@@ -1,12 +1,12 @@
 //
-//  StationInfo.swift
+//  TimeTableInfo.swift
 //  FlixBus
 //
 //  Created by Jitendra on 29/03/18.
 //  Copyright © 2018 Jitendra Gandhi. All rights reserved.
 //
 
-struct StationInfo {
+struct TimeTableInfo {
     
     let throughStations: String
     
