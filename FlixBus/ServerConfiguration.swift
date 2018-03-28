@@ -20,7 +20,7 @@ struct Configuration {
 
     static let authenticationToken = "intervIEW_TOK3n"
     
-    static func getResourcePath(path: ResourcePath, parameters: [String]) -> String {
+    static func getFilledResourcePath(_ path: ResourcePath, parameters: [String]) -> String {
         
         let toRemoveCharacter = "%@"
         

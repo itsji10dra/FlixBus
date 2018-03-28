@@ -10,17 +10,26 @@ import UIKit
 
 class StationsListVC: UIViewController {
 
+    // MARK: - IBOutlets
+    
+    
+    // MARK: - Data
+    
+    private let stations: [Station] = {
+        return [Station(1, name: "Berlin ZOB"),
+                Station(10, name: "Munich ZOB")]
+    }()
+    
+    // MARK: - View Hierarchy
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
         
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
+    
 
 }
 
