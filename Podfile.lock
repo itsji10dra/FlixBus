@@ -1,0 +1,28 @@
+PODS:
+  - Alamofire (4.7.0)
+  - AlamofireNetworkActivityIndicator (2.2.0):
+    - Alamofire (~> 4.5)
+  - NVActivityIndicatorView (4.1.1):
+    - NVActivityIndicatorView/Presenter (= 4.1.1)
+  - NVActivityIndicatorView/Presenter (4.1.1)
+  - RxCocoa (4.1.2):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.1.2)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.7)
+  - AlamofireNetworkActivityIndicator (~> 2.2)
+  - NVActivityIndicatorView
+  - RxCocoa (~> 4.0)
+  - RxSwift (~> 4.0)
+
+SPEC CHECKSUMS:
+  Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
+  AlamofireNetworkActivityIndicator: 81e1630e7cfed22a4e4e82a174c59e651dc4f8ca
+  NVActivityIndicatorView: 60109b9bf46efc2e71ab81453196ccdfdfeea870
+  RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
+  RxSwift: e49536837d9901277638493ea537394d4b55f570
+
+PODFILE CHECKSUM: 241f15c6e6b057f35dfaa3b94bfba2bb69466d48
+
+COCOAPODS: 1.4.0
