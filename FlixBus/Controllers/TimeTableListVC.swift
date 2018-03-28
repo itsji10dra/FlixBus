@@ -37,14 +37,18 @@ class TimeTableListVC: UIViewController {
         let urlString = Configuration.url + Configuration.getFilledResourcePath(.timeTable, parameters: [String(stationId)])
         let headers: [String:String] = [Header.apiAuthentication.rawValue:Configuration.authenticationToken]
         
+        LoadingIndicator.startAnimating()
+        
         RxAlamofire.requestJSON(.get, urlString, headers: headers)
-            .subscribe(onNext: { [weak self] (response, json) in
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { (_, json) in
                 let data = TimeTableInfo.parse(json)
                 print(data)
-            }, onError: { [weak self] (error) in
+            }, onError: { (error) in
                 print("Error:", error)
+            }, onCompleted: {
+                LoadingIndicator.stopAnimating()
             })
             .disposed(by: disposeBag)
     }
-    
 }
