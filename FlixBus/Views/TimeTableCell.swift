@@ -26,4 +26,11 @@ class TimeTableCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
     }
+    
+    func configure(data: TimeTableInfo) {
+        
+        self.timeLabel.text = data.dateTimeInfo?.timeZone
+        self.lineInfoLabel.text = (data.lineCode ?? "") + " " + (data.lineDirection ?? "")
+        self.throughStationsLabel.text = data.throughStations
+    }
 }
