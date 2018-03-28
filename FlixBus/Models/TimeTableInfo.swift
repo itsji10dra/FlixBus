@@ -13,6 +13,8 @@ struct TimeTableInfo {
     let lineCode: String
     
     let lineDirection: String
+    
+    let dateTimeInfo: DateTime
 }
 
 struct DateTime {

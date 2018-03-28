@@ -5,6 +5,7 @@ PODS:
   - NVActivityIndicatorView (4.1.1):
     - NVActivityIndicatorView/Presenter (= 4.1.1)
   - NVActivityIndicatorView/Presenter (4.1.1)
+  - ObjectMapper (3.1.0)
   - RxAlamofire (4.1.0):
     - RxAlamofire/Core (= 4.1.0)
   - RxAlamofire/Core (4.1.0):
@@ -17,6 +18,7 @@ PODS:
 DEPENDENCIES:
   - AlamofireNetworkActivityIndicator (~> 2.2)
   - NVActivityIndicatorView
+  - ObjectMapper (~> 3.1)
   - RxAlamofire
   - RxCocoa (~> 4.0)
   - RxSwift (~> 4.0)
@@ -25,10 +27,11 @@ SPEC CHECKSUMS:
   Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
   AlamofireNetworkActivityIndicator: 81e1630e7cfed22a4e4e82a174c59e651dc4f8ca
   NVActivityIndicatorView: 60109b9bf46efc2e71ab81453196ccdfdfeea870
+  ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
   RxAlamofire: 96a2bff4694a1609bb59c57b53d99ea7a0ddc64a
   RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
   RxSwift: e49536837d9901277638493ea537394d4b55f570
 
-PODFILE CHECKSUM: 57a9241c957042730ab14a6603da24cdc7b5dcfd
+PODFILE CHECKSUM: 3980a8a3c5b89f6a812e6a3bc8db072ef0b55763
 
 COCOAPODS: 1.4.0

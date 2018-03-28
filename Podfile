@@ -4,17 +4,20 @@ inhibit_all_warnings!
 
 target 'FlixBus' do
 
-  #Networking
-  pod 'RxAlamofire'
-  pod 'AlamofireNetworkActivityIndicator', '~> 2.2'
+  #Data
+  pod 'ObjectMapper', '~> 3.1'
 
   #React
   pod 'RxSwift',    '~> 4.0'
   pod 'RxCocoa',    '~> 4.0'
-
+  
+  #React + Networking
+  pod 'RxAlamofire'
+  
   #UI
   pod 'NVActivityIndicatorView'
-
+  pod 'AlamofireNetworkActivityIndicator', '~> 2.2'
+  
   target 'FlixBusTests' do
     inherit! :search_paths
     # Pods for testing
