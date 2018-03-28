@@ -39,10 +39,12 @@ class TimeTableListVC: UIViewController {
         
         RxAlamofire.requestJSON(.get, urlString, headers: headers)
             .subscribe(onNext: { [weak self] (response, json) in
-                print("JSON:", json)
+                let data = TimeTableInfo.parse(json)
+                print(data)
             }, onError: { [weak self] (error) in
                 print("Error:", error)
             })
             .disposed(by: disposeBag)
     }
+    
 }

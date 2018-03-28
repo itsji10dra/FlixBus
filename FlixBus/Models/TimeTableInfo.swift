@@ -6,20 +6,42 @@
 //  Copyright © 2018 Jitendra Gandhi. All rights reserved.
 //
 
-struct TimeTableInfo {
+import ObjectMapper
+
+struct TimeTableInfo: Mappable {
     
-    let throughStations: String
+    var throughStations: String?
     
-    let lineCode: String
+    var lineCode: String?
     
-    let lineDirection: String
+    var lineDirection: String?
     
-    let dateTimeInfo: DateTime
+    var dateTimeInfo: DateTime?
+    
+    init?(map: Map) {
+        
+    }
+    
+    mutating func mapping(map: Map) {
+        throughStations     <- map["through_the_stations"]
+        lineCode            <- map["line_code"]
+        lineDirection       <- map["line_direction"]
+        dateTimeInfo        <- map["datetime"]
+    }
 }
 
-struct DateTime {
+struct DateTime: Mappable {
     
-    let timeStamp: String
+    var timeStamp: String?
     
-    let timeZone: String
+    var timeZone: String?
+    
+    init?(map: Map) {
+        
+    }
+    
+    mutating func mapping(map: Map) {
+        timeStamp       <- map["timestamp"]
+        timeZone        <- map["tz"]
+    }
 }

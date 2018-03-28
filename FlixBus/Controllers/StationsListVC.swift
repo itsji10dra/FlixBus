@@ -19,8 +19,8 @@ class StationsListVC: UIViewController, UITableViewDelegate {
     // MARK: - Data
     
     private let stations: [Station] = {         //Hard-coding for Assignment
-        return [Station(1, name: "Berlin ZOB"),
-                Station(10, name: "Munich ZOB")]
+        return [Station(id: 1, name: "Berlin ZOB"),
+                Station(id: 10, name: "Munich ZOB")]
     }()
     
     // MARK: - Rx

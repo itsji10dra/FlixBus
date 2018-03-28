@@ -9,11 +9,7 @@
 struct Station {
     
     let id: Int
-    let name: String
     
-    init(_ id: Int, name: String) {
-        self.id = id
-        self.name = name
-    }
+    let name: String
 }
 
