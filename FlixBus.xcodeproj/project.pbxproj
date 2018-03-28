@@ -14,7 +14,10 @@
 		108558A3206BED1F00601CF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 108558A1206BED1F00601CF7 /* LaunchScreen.storyboard */; };
 		108558AE206BED1F00601CF7 /* FlixBusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108558AD206BED1F00601CF7 /* FlixBusTests.swift */; };
 		108558B9206BED1F00601CF7 /* FlixBusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108558B8206BED1F00601CF7 /* FlixBusUITests.swift */; };
-		108558C7206BEDC600601CF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108558C6206BEDC600601CF7 /* ViewController.swift */; };
+		108558C7206BEDC600601CF7 /* StationsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108558C6206BEDC600601CF7 /* StationsListVC.swift */; };
+		108558C9206BF1F700601CF7 /* TimeTableListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108558C8206BF1F700601CF7 /* TimeTableListVC.swift */; };
+		108558CD206BF27500601CF7 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108558CC206BF27500601CF7 /* Station.swift */; };
+		108558CF206BF2FC00601CF7 /* ServerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108558CE206BF2FC00601CF7 /* ServerConfiguration.swift */; };
 		458C62D71D3479AD3A3DF37B /* Pods_FlixBus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9678A147E5A3E7504A2B1C7 /* Pods_FlixBus.framework */; };
 		925AD3A5D9C61315A4857D6B /* Pods_FlixBusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 450CDBBC5C5846269A948D8A /* Pods_FlixBusTests.framework */; };
 /* End PBXBuildFile section */
@@ -49,7 +52,10 @@
 		108558B4206BED1F00601CF7 /* FlixBusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlixBusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		108558B8206BED1F00601CF7 /* FlixBusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlixBusUITests.swift; sourceTree = "<group>"; };
 		108558BA206BED1F00601CF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		108558C6206BEDC600601CF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		108558C6206BEDC600601CF7 /* StationsListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsListVC.swift; sourceTree = "<group>"; };
+		108558C8206BF1F700601CF7 /* TimeTableListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableListVC.swift; sourceTree = "<group>"; };
+		108558CC206BF27500601CF7 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		108558CE206BF2FC00601CF7 /* ServerConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConfiguration.swift; sourceTree = "<group>"; };
 		113198FAD163CC58D2D0BA70 /* Pods-FlixBus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlixBus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlixBus/Pods-FlixBus.debug.xcconfig"; sourceTree = "<group>"; };
 		450CDBBC5C5846269A948D8A /* Pods_FlixBusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlixBusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FFF110BB8DFC7350F80C74 /* Pods-FlixBusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlixBusTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlixBusTests/Pods-FlixBusTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -128,7 +134,9 @@
 			isa = PBXGroup;
 			children = (
 				10855898206BED1E00601CF7 /* AppDelegate.swift */,
-				108558C6206BEDC600601CF7 /* ViewController.swift */,
+				108558CE206BF2FC00601CF7 /* ServerConfiguration.swift */,
+				108558CA206BF20200601CF7 /* Controllers */,
+				108558CB206BF20F00601CF7 /* Models */,
 				1085589C206BED1F00601CF7 /* Main.storyboard */,
 				1085589F206BED1F00601CF7 /* Assets.xcassets */,
 				108558A1206BED1F00601CF7 /* LaunchScreen.storyboard */,
@@ -153,6 +161,23 @@
 				108558BA206BED1F00601CF7 /* Info.plist */,
 			);
 			path = FlixBusUITests;
+			sourceTree = "<group>";
+		};
+		108558CA206BF20200601CF7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				108558C6206BEDC600601CF7 /* StationsListVC.swift */,
+				108558C8206BF1F700601CF7 /* TimeTableListVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		108558CB206BF20F00601CF7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				108558CC206BF27500601CF7 /* Station.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		9EC61A4915E774768C2CD5BE /* Frameworks */ = {
@@ -467,7 +492,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				10855899206BED1E00601CF7 /* AppDelegate.swift in Sources */,
-				108558C7206BEDC600601CF7 /* ViewController.swift in Sources */,
+				108558CF206BF2FC00601CF7 /* ServerConfiguration.swift in Sources */,
+				108558C7206BEDC600601CF7 /* StationsListVC.swift in Sources */,
+				108558CD206BF27500601CF7 /* Station.swift in Sources */,
+				108558C9206BF1F700601CF7 /* TimeTableListVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
