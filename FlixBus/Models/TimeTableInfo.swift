@@ -32,7 +32,7 @@ struct TimeTableInfo: Mappable {
 
 struct DateTime: Mappable {
     
-    var timeStamp: String?
+    var timeStamp: Int64?
     
     var timeZone: String?
     
