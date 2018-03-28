@@ -10,8 +10,9 @@ import UIKit
 import RxSwift
 import RxCocoa
 import RxAlamofire
+import RxDataSources
 
-class TimeTableListVC: UIViewController {
+class TimeTableListVC: UIViewController, UITableViewDelegate {
 
     // MARK: - IBOutlets
     
@@ -19,7 +20,7 @@ class TimeTableListVC: UIViewController {
     
     // MARK: - Data
     
-    var station: Station?
+    internal var station: Station?
     
     // MARK: - Rx
     
