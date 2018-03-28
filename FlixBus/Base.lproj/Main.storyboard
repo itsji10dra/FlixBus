@@ -31,7 +31,7 @@
         <!--Stations List-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Stations List" customClass="StationsListVC" customModule="FlixBus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StationsList" id="BYZ-38-t0r" userLabel="Stations List" customClass="StationsListVC" customModule="FlixBus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -49,6 +49,9 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Xlg-uv-rDh"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -62,6 +65,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Station" id="Adc-hD-XoI"/>
                     <connections>
+                        <outlet property="stationTableView" destination="wAt-DK-TsV" id="Ggd-zm-G4a"/>
                         <segue destination="2pY-rN-p4Y" kind="show" identifier="TimeTableListSegue" id="jtP-ap-JQs"/>
                     </connections>
                 </viewController>
@@ -72,7 +76,7 @@
         <!--Time Table List-->
         <scene sceneID="7Vw-qX-rOs">
             <objects>
-                <viewController id="2pY-rN-p4Y" userLabel="Time Table List" customClass="TimeTableListVC" customModule="FlixBus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TimeTableList" id="2pY-rN-p4Y" userLabel="Time Table List" customClass="TimeTableListVC" customModule="FlixBus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mzf-T2-b0p">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,6 +94,9 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="delegate" destination="2pY-rN-p4Y" id="yLs-Va-e7z"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -101,6 +108,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zoS-id-0c0"/>
                     </view>
+                    <connections>
+                        <outlet property="detailsTableView" destination="0TL-JO-mMX" id="sEi-2P-hJP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X9z-lf-2ld" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

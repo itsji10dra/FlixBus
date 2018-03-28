@@ -7,8 +7,24 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class TimeTableListVC: UIViewController {
+
+    // MARK: - IBOutlets
+    
+    @IBOutlet weak private var detailsTableView: UITableView!
+    
+    // MARK: - Data
+    
+    var station: Station?
+    
+    // MARK: - Rx
+    
+    let disposeBag = DisposeBag()
+    
+    // MARK: - View Hierarchy
 
     override func viewDidLoad() {
         super.viewDidLoad()
