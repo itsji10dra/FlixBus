@@ -131,8 +131,8 @@ class TimeTableListVC: UIViewController, UITableViewDelegate {
     
     @IBAction func preferenceAction(_ sender: Any) {
         
-        let alertController = UIAlertController(title: "Display preference.",
-                                                message: nil,
+        let alertController = UIAlertController(title: "Select",
+                                                message: "Display preference",
                                                 preferredStyle: .alert)
         
         let currentPrefJourneyType = Preference.defaultPreference.linkedJourneyType
