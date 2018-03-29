@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		08BF7D68B7F830F7CA0CEF61 /* Pods_FlixBusUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B89357640EB6437DF311562E /* Pods_FlixBusUITests.framework */; };
+		101D3216206CAEBB0038DAD7 /* RouteInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101D3215206CAEBB0038DAD7 /* RouteInfo.swift */; };
 		10855899206BED1E00601CF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10855898206BED1E00601CF7 /* AppDelegate.swift */; };
 		1085589E206BED1F00601CF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1085589C206BED1F00601CF7 /* Main.storyboard */; };
 		108558A0206BED1F00601CF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1085589F206BED1F00601CF7 /* Assets.xcassets */; };
@@ -21,7 +22,7 @@
 		108558D2206C001C00601CF7 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108558D1206C001C00601CF7 /* Navigation.swift */; };
 		10D4FE67206C1AAE00C22937 /* TimeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D4FE66206C1AAE00C22937 /* TimeTableCell.swift */; };
 		10D4FE69206C240F00C22937 /* TimeTableInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D4FE68206C240F00C22937 /* TimeTableInfo.swift */; };
-		10D4FE6B206C2C4C00C22937 /* TimeTableInfo+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D4FE6A206C2C4C00C22937 /* TimeTableInfo+Data.swift */; };
+		10D4FE6B206C2C4C00C22937 /* TimeTableInfo+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D4FE6A206C2C4C00C22937 /* TimeTableInfo+JSON.swift */; };
 		10D4FE6D206C2CBF00C22937 /* JourneyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D4FE6C206C2CBF00C22937 /* JourneyType.swift */; };
 		10D4FE6F206C307700C22937 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D4FE6E206C307700C22937 /* LoadingIndicator.swift */; };
 		10D4FE71206C351F00C22937 /* TimeTableInfo+RxDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D4FE70206C351F00C22937 /* TimeTableInfo+RxDataSource.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		101D3215206CAEBB0038DAD7 /* RouteInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteInfo.swift; sourceTree = "<group>"; };
 		10855895206BED1E00601CF7 /* FlixBus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlixBus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10855898206BED1E00601CF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1085589D206BED1F00601CF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,7 +68,7 @@
 		108558D1206C001C00601CF7 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		10D4FE66206C1AAE00C22937 /* TimeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableCell.swift; sourceTree = "<group>"; };
 		10D4FE68206C240F00C22937 /* TimeTableInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableInfo.swift; sourceTree = "<group>"; };
-		10D4FE6A206C2C4C00C22937 /* TimeTableInfo+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeTableInfo+Data.swift"; sourceTree = "<group>"; };
+		10D4FE6A206C2C4C00C22937 /* TimeTableInfo+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeTableInfo+JSON.swift"; sourceTree = "<group>"; };
 		10D4FE6C206C2CBF00C22937 /* JourneyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyType.swift; sourceTree = "<group>"; };
 		10D4FE6E206C307700C22937 /* LoadingIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
 		10D4FE70206C351F00C22937 /* TimeTableInfo+RxDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeTableInfo+RxDataSource.swift"; sourceTree = "<group>"; };
@@ -195,8 +197,9 @@
 				10D4FE6C206C2CBF00C22937 /* JourneyType.swift */,
 				108558CC206BF27500601CF7 /* Station.swift */,
 				10D4FE68206C240F00C22937 /* TimeTableInfo.swift */,
-				10D4FE6A206C2C4C00C22937 /* TimeTableInfo+Data.swift */,
+				10D4FE6A206C2C4C00C22937 /* TimeTableInfo+JSON.swift */,
 				10D4FE70206C351F00C22937 /* TimeTableInfo+RxDataSource.swift */,
+				101D3215206CAEBB0038DAD7 /* RouteInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -537,8 +540,9 @@
 				10D4FE67206C1AAE00C22937 /* TimeTableCell.swift in Sources */,
 				108558D2206C001C00601CF7 /* Navigation.swift in Sources */,
 				10D4FE6D206C2CBF00C22937 /* JourneyType.swift in Sources */,
+				101D3216206CAEBB0038DAD7 /* RouteInfo.swift in Sources */,
 				108558CD206BF27500601CF7 /* Station.swift in Sources */,
-				10D4FE6B206C2C4C00C22937 /* TimeTableInfo+Data.swift in Sources */,
+				10D4FE6B206C2C4C00C22937 /* TimeTableInfo+JSON.swift in Sources */,
 				108558C9206BF1F700601CF7 /* TimeTableListVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

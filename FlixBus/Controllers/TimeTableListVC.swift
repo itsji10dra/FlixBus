@@ -125,10 +125,10 @@ class TimeTableListVC: UIViewController, UITableViewDelegate {
                 
                 cell.configure(data: item)
                 return cell
-        },
-        titleForHeaderInSection: { (datasource, section) in
-            return datasource[section].journeyType.rawValue
-        })
+            },
+            titleForHeaderInSection: { (datasource, section) in
+                return datasource[section].journeyType.rawValue
+            })
     }
 
     private func tableViewModel() {

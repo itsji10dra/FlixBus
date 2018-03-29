@@ -16,7 +16,7 @@ struct TimeTableInfo: Mappable {
     
     var lineCode: String?
     
-    var lineDirection: String?
+    var direction: String?
     
     var dateTimeInfo: DateTime?
     
@@ -28,7 +28,7 @@ struct TimeTableInfo: Mappable {
         rideId              <- map["ride_id"]
         throughStations     <- map["through_the_stations"]
         lineCode            <- map["line_code"]
-        lineDirection       <- map["line_direction"]
+        direction           <- map["direction"]
         dateTimeInfo        <- map["datetime"]
     }
 }
