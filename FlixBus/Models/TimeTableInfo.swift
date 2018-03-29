@@ -10,7 +10,7 @@ import ObjectMapper
 
 struct TimeTableInfo: Mappable {
     
-    var rideId: Int64?
+    private(set) var rideId: Int64?
     
     var throughStations: String?
     
@@ -22,6 +22,8 @@ struct TimeTableInfo: Mappable {
     
     var routeInfo: [RouteInfo]?
     
+    // MARK: - Mappable
+
     init?(map: Map) {
         
     }
@@ -38,10 +40,12 @@ struct TimeTableInfo: Mappable {
 
 struct DateTime: Mappable {
     
-    var timeStamp: Int64?
+    private var timeStamp: Int64?
     
-    var timeZone: String?
+    private var timeZone: String?
     
+    // MARK: - Mappable
+
     init?(map: Map) {
         
     }
@@ -49,5 +53,20 @@ struct DateTime: Mappable {
     mutating func mapping(map: Map) {
         timeStamp       <- map["timestamp"]
         timeZone        <- map["tz"]
+    }
+    
+    // MARK: - Internal Methods
+
+    internal func getLocalTime() -> String? {
+        
+        guard let timeStamp = timeStamp else { return nil }
+        
+        let timeInterval = TimeInterval(timeStamp)
+        
+        let date = Date(timeIntervalSince1970: timeInterval)
+        
+        let stringDate = Date.string(from: date, format: .HH_colon_mm)
+        
+        return stringDate
     }
 }

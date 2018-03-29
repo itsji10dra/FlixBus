@@ -142,19 +142,18 @@ class TimeTableListVC: UIViewController, UITableViewDelegate {
         detailsTableView.rx
             .modelSelected(TimeTableInfo.self)
             .subscribe(onNext:  { [weak self] timeTableInfo in
-                guard let routes = timeTableInfo.routeInfo else { return }
-                self?.showRouteInfo(for: routes)
+                self?.showRouteInfo(with: timeTableInfo)
             })
             .disposed(by: disposeBag)
     }
     
     // MARK: - Navigation
     
-    private func showRouteInfo(for routes: [RouteInfo]) {
+    private func showRouteInfo(with timeTable: TimeTableInfo) {
         
         guard let routeInfoVC = Navigation.getViewController(type: RouteInfoVC.self, identifer: "RouteInfo") else { return }
         
-        routeInfoVC.routes = routes
+        routeInfoVC.timeTableInfo = timeTable
 
         navigationController?.pushViewController(routeInfoVC, animated: true)
     }

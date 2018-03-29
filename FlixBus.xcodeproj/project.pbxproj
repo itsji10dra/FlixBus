@@ -13,6 +13,7 @@
 		101D321A206CB7D30038DAD7 /* RouteInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101D3219206CB7D30038DAD7 /* RouteInfoView.swift */; };
 		101D321C206CB7DE0038DAD7 /* RouteInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 101D321B206CB7DE0038DAD7 /* RouteInfoView.xib */; };
 		101D321F206CB8AD0038DAD7 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101D321E206CB8AD0038DAD7 /* UIView+Extension.swift */; };
+		101D3222206CC14E0038DAD7 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101D3221206CC14E0038DAD7 /* Date+Extension.swift */; };
 		10855899206BED1E00601CF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10855898206BED1E00601CF7 /* AppDelegate.swift */; };
 		1085589E206BED1F00601CF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1085589C206BED1F00601CF7 /* Main.storyboard */; };
 		108558A0206BED1F00601CF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1085589F206BED1F00601CF7 /* Assets.xcassets */; };
@@ -57,6 +58,7 @@
 		101D3219206CB7D30038DAD7 /* RouteInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteInfoView.swift; sourceTree = "<group>"; };
 		101D321B206CB7DE0038DAD7 /* RouteInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RouteInfoView.xib; sourceTree = "<group>"; };
 		101D321E206CB8AD0038DAD7 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		101D3221206CC14E0038DAD7 /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		10855895206BED1E00601CF7 /* FlixBus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlixBus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10855898206BED1E00601CF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1085589D206BED1F00601CF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -132,8 +134,18 @@
 			isa = PBXGroup;
 			children = (
 				101D321E206CB8AD0038DAD7 /* UIView+Extension.swift */,
+				101D3221206CC14E0038DAD7 /* Date+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		101D3223206CC2FB0038DAD7 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				108558D1206C001C00601CF7 /* Navigation.swift */,
+				10D4FE6E206C307700C22937 /* LoadingIndicator.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		1068AC28C12F0781D332CE5A /* Pods */ = {
@@ -176,8 +188,7 @@
 			children = (
 				10855898206BED1E00601CF7 /* AppDelegate.swift */,
 				108558CE206BF2FC00601CF7 /* Configuration.swift */,
-				108558D1206C001C00601CF7 /* Navigation.swift */,
-				10D4FE6E206C307700C22937 /* LoadingIndicator.swift */,
+				101D3223206CC2FB0038DAD7 /* UI */,
 				101D3220206CBB820038DAD7 /* Extensions */,
 				108558CA206BF20200601CF7 /* Controllers */,
 				108558CB206BF20F00601CF7 /* Models */,
@@ -569,6 +580,7 @@
 				101D321A206CB7D30038DAD7 /* RouteInfoView.swift in Sources */,
 				10D4FE69206C240F00C22937 /* TimeTableInfo.swift in Sources */,
 				108558C7206BEDC600601CF7 /* StationsListVC.swift in Sources */,
+				101D3222206CC14E0038DAD7 /* Date+Extension.swift in Sources */,
 				10D4FE67206C1AAE00C22937 /* TimeTableCell.swift in Sources */,
 				108558D2206C001C00601CF7 /* Navigation.swift in Sources */,
 				10D4FE6D206C2CBF00C22937 /* JourneyType.swift in Sources */,

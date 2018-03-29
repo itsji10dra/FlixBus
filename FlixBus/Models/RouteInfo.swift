@@ -20,6 +20,8 @@ struct RouteInfo: Mappable {
     
     var coordinates: Coordinates?
 
+    // MARK: - Mappable
+
     init?(map: Map) {
         
     }
@@ -38,6 +40,8 @@ struct Coordinates: Mappable {
     var latitude: Double?
     
     var longitude: Double?
+
+    // MARK: - Mappable
 
     init?(map: Map) {
         

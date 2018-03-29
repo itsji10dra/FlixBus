@@ -16,14 +16,14 @@ class RouteInfoVC: UIViewController {
 
     // MARK: - Data
     
-    internal var routes: [RouteInfo]?
+    internal var timeTableInfo: TimeTableInfo?
     
     // MARK: - View Hierarchy
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "Routes"
+        title = "Routes @ " + (timeTableInfo?.dateTimeInfo?.getLocalTime() ?? "")
 
         loadRoutes()
     }
@@ -32,7 +32,7 @@ class RouteInfoVC: UIViewController {
 
     private func loadRoutes() {
         
-        guard let routes = routes else { return }
+        guard let routes = timeTableInfo?.routeInfo else { return }
 
         routes.forEach { route in
             let view = RouteInfoView()

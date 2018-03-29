@@ -29,7 +29,7 @@ class TimeTableCell: UITableViewCell {
     
     func configure(data: TimeTableInfo) {
         
-        self.timeLabel.text = data.dateTimeInfo?.timeZone
+        self.timeLabel.text = data.dateTimeInfo?.getLocalTime()
         self.lineInfoLabel.text = (data.lineCode ?? "") + " " + (data.direction ?? "")
         self.throughStationsLabel.text = data.throughStations
     }
