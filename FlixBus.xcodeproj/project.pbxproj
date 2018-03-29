@@ -14,6 +14,9 @@
 		101D321C206CB7DE0038DAD7 /* RouteInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 101D321B206CB7DE0038DAD7 /* RouteInfoView.xib */; };
 		101D321F206CB8AD0038DAD7 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101D321E206CB8AD0038DAD7 /* UIView+Extension.swift */; };
 		101D3222206CC14E0038DAD7 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101D3221206CC14E0038DAD7 /* Date+Extension.swift */; };
+		101D3226206CD6210038DAD7 /* Station+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101D3225206CD6210038DAD7 /* Station+JSON.swift */; };
+		101D322A206CE8250038DAD7 /* Station.plist in Resources */ = {isa = PBXBuildFile; fileRef = 101D3229206CE8250038DAD7 /* Station.plist */; };
+		101D322C206CEADD0038DAD7 /* ParsingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101D322B206CEADD0038DAD7 /* ParsingHelper.swift */; };
 		10855899206BED1E00601CF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10855898206BED1E00601CF7 /* AppDelegate.swift */; };
 		1085589E206BED1F00601CF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1085589C206BED1F00601CF7 /* Main.storyboard */; };
 		108558A0206BED1F00601CF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1085589F206BED1F00601CF7 /* Assets.xcassets */; };
@@ -59,6 +62,9 @@
 		101D321B206CB7DE0038DAD7 /* RouteInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RouteInfoView.xib; sourceTree = "<group>"; };
 		101D321E206CB8AD0038DAD7 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		101D3221206CC14E0038DAD7 /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		101D3225206CD6210038DAD7 /* Station+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Station+JSON.swift"; sourceTree = "<group>"; };
+		101D3229206CE8250038DAD7 /* Station.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Station.plist; sourceTree = "<group>"; };
+		101D322B206CEADD0038DAD7 /* ParsingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsingHelper.swift; sourceTree = "<group>"; };
 		10855895206BED1E00601CF7 /* FlixBus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlixBus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10855898206BED1E00601CF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1085589D206BED1F00601CF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -148,6 +154,43 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		101D3224206CD5D60038DAD7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1085589F206BED1F00601CF7 /* Assets.xcassets */,
+				108558A1206BED1F00601CF7 /* LaunchScreen.storyboard */,
+				101D3229206CE8250038DAD7 /* Station.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		101D3227206CD6260038DAD7 /* Station */ = {
+			isa = PBXGroup;
+			children = (
+				108558CC206BF27500601CF7 /* Station.swift */,
+				101D3225206CD6210038DAD7 /* Station+JSON.swift */,
+			);
+			path = Station;
+			sourceTree = "<group>";
+		};
+		101D3228206CD62E0038DAD7 /* TimeTable */ = {
+			isa = PBXGroup;
+			children = (
+				10D4FE68206C240F00C22937 /* TimeTableInfo.swift */,
+				10D4FE6A206C2C4C00C22937 /* TimeTableInfo+JSON.swift */,
+				10D4FE70206C351F00C22937 /* TimeTableInfo+RxDataSource.swift */,
+			);
+			path = TimeTable;
+			sourceTree = "<group>";
+		};
+		101D322D206CED650038DAD7 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				101D322B206CEADD0038DAD7 /* ParsingHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		1068AC28C12F0781D332CE5A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,14 +231,14 @@
 			children = (
 				10855898206BED1E00601CF7 /* AppDelegate.swift */,
 				108558CE206BF2FC00601CF7 /* Configuration.swift */,
+				1085589C206BED1F00601CF7 /* Main.storyboard */,
+				101D322D206CED650038DAD7 /* Helper */,
 				101D3223206CC2FB0038DAD7 /* UI */,
 				101D3220206CBB820038DAD7 /* Extensions */,
 				108558CA206BF20200601CF7 /* Controllers */,
 				108558CB206BF20F00601CF7 /* Models */,
 				10D4FE65206C1A7600C22937 /* Views */,
-				1085589C206BED1F00601CF7 /* Main.storyboard */,
-				1085589F206BED1F00601CF7 /* Assets.xcassets */,
-				108558A1206BED1F00601CF7 /* LaunchScreen.storyboard */,
+				101D3224206CD5D60038DAD7 /* Resources */,
 				108558A4206BED1F00601CF7 /* Info.plist */,
 			);
 			path = FlixBus;
@@ -233,10 +276,8 @@
 			isa = PBXGroup;
 			children = (
 				10D4FE6C206C2CBF00C22937 /* JourneyType.swift */,
-				108558CC206BF27500601CF7 /* Station.swift */,
-				10D4FE68206C240F00C22937 /* TimeTableInfo.swift */,
-				10D4FE6A206C2C4C00C22937 /* TimeTableInfo+JSON.swift */,
-				10D4FE70206C351F00C22937 /* TimeTableInfo+RxDataSource.swift */,
+				101D3227206CD6260038DAD7 /* Station */,
+				101D3228206CD62E0038DAD7 /* TimeTable */,
 				101D3215206CAEBB0038DAD7 /* RouteInfo.swift */,
 			);
 			path = Models;
@@ -378,6 +419,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				101D321C206CB7DE0038DAD7 /* RouteInfoView.xib in Resources */,
+				101D322A206CE8250038DAD7 /* Station.plist in Resources */,
 				108558A3206BED1F00601CF7 /* LaunchScreen.storyboard in Resources */,
 				108558A0206BED1F00601CF7 /* Assets.xcassets in Resources */,
 				1085589E206BED1F00601CF7 /* Main.storyboard in Resources */,
@@ -579,12 +621,14 @@
 				108558CF206BF2FC00601CF7 /* Configuration.swift in Sources */,
 				101D321A206CB7D30038DAD7 /* RouteInfoView.swift in Sources */,
 				10D4FE69206C240F00C22937 /* TimeTableInfo.swift in Sources */,
+				101D3226206CD6210038DAD7 /* Station+JSON.swift in Sources */,
 				108558C7206BEDC600601CF7 /* StationsListVC.swift in Sources */,
 				101D3222206CC14E0038DAD7 /* Date+Extension.swift in Sources */,
 				10D4FE67206C1AAE00C22937 /* TimeTableCell.swift in Sources */,
 				108558D2206C001C00601CF7 /* Navigation.swift in Sources */,
 				10D4FE6D206C2CBF00C22937 /* JourneyType.swift in Sources */,
 				101D3216206CAEBB0038DAD7 /* RouteInfo.swift in Sources */,
+				101D322C206CEADD0038DAD7 /* ParsingHelper.swift in Sources */,
 				108558CD206BF27500601CF7 /* Station.swift in Sources */,
 				10D4FE6B206C2C4C00C22937 /* TimeTableInfo+JSON.swift in Sources */,
 				108558C9206BF1F700601CF7 /* TimeTableListVC.swift in Sources */,

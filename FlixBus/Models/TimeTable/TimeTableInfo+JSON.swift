@@ -35,20 +35,12 @@ extension TimeTableInfo {
         var timeTableInfo: [TimeTableInfo] = []
         
         infoArray.forEach { info in
-            if let jsonText = getJSONString(dictionary: info),
+            if let jsonText = ParsingHelper.getJSONString(dictionary: info),
                 let infoObj = Mapper<TimeTableInfo>().map(JSONString: jsonText) {
                 timeTableInfo.append(infoObj)
             }
         }
         
         return timeTableInfo
-    }
-    
-    static private func getJSONString(dictionary: [String: AnyObject]) -> String? {
-        
-        guard let theJSONData = try? JSONSerialization.data(withJSONObject: dictionary, options: .prettyPrinted),
-            let theJSONText = String(data: theJSONData, encoding: String.Encoding.utf8) else { return nil }
-        
-        return theJSONText
     }
 }
