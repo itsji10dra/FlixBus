@@ -43,7 +43,7 @@ class RouteInfoVC: UIViewController {
         
         let titleSize: CGFloat = 18
         let subtitleSize: CGFloat = 16
-        
+
         let label = UILabel()
         label.textAlignment = .center
         label.numberOfLines = 2

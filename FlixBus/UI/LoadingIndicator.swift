@@ -20,14 +20,14 @@ struct LoadingIndicator {
 
     public static var defaultMessage = "Loading..."
 
-    public static var messageFont = UIFont.systemFont(ofSize: 15)
+    public static var messageFont = UIFont.systemFont(ofSize: 17)
 
     public static func startAnimating(message: String? = defaultMessage) {
 
         let activityData = ActivityData(size: CGSize(width: size, height: size),
                                         message: message,
                                         messageFont: messageFont,
-                                        messageSpacing: 30,
+                                        messageSpacing: 15,
                                         type: .lineSpinFadeLoader,
                                         color: indicatorColor,
                                         backgroundColor: backgroundColor,

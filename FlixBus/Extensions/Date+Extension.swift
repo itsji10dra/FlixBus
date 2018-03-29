@@ -10,8 +10,6 @@ import Foundation
 
 extension Date {
 
-    // swiftlint:disable force_unwrapping identifier_name
-
     static let formatter = DateFormatter()
 
     static let gmtTimeZone = TimeZone(abbreviation: "GMT")!

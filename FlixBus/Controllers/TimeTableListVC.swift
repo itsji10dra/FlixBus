@@ -55,6 +55,8 @@ class TimeTableListVC: UIViewController, UITableViewDelegate {
     
     @IBOutlet weak private var detailsTableView: UITableView!
     
+    @IBOutlet weak private var sortBarButton: UIBarButtonItem!
+    
     // MARK: - Data
     
     internal var station: Station?
@@ -77,6 +79,8 @@ class TimeTableListVC: UIViewController, UITableViewDelegate {
         loadTimeTable()
     }
     
+    // MARK: - Private Methods
+
     private func loadTimeTable() {
         
         guard let stationId = station?.id else { return }
@@ -106,6 +110,12 @@ class TimeTableListVC: UIViewController, UITableViewDelegate {
                 LoadingIndicator.stopAnimating()
             })
             .disposed(by: disposeBag)
+    }
+    
+    // MARK: - Action
+    
+    @IBAction func sortAction(_ sender: Any) {
+        
     }
     
     // MARK: - Rx Model
