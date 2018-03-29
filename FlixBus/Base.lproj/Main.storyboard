@@ -155,15 +155,15 @@
                         <viewLayoutGuide key="safeArea" id="zoS-id-0c0"/>
                     </view>
                     <navigationItem key="navigationItem" id="sZH-9l-QSI">
-                        <barButtonItem key="rightBarButtonItem" title="Sort" id="QDz-PI-QiF">
+                        <barButtonItem key="rightBarButtonItem" image="settings" id="QDz-PI-QiF">
                             <connections>
-                                <action selector="sortAction:" destination="2pY-rN-p4Y" id="dTu-BE-oMw"/>
+                                <action selector="preferenceAction:" destination="2pY-rN-p4Y" id="dTu-BE-oMw"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="detailsTableView" destination="0TL-JO-mMX" id="sEi-2P-hJP"/>
-                        <outlet property="sortBarButton" destination="QDz-PI-QiF" id="Q2t-c2-4YU"/>
+                        <outlet property="preferenceBarButton" destination="QDz-PI-QiF" id="Q2t-c2-4YU"/>
                         <segue destination="oop-QF-ffD" kind="show" identifier="RouteInfoSegue" id="pcS-s0-h1e"/>
                     </connections>
                 </viewController>
@@ -214,4 +214,7 @@
             <point key="canvasLocation" x="2059" y="34"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="settings" width="30" height="30"/>
+    </resources>
 </document>

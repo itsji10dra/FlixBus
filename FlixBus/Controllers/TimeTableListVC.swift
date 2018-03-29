@@ -55,12 +55,12 @@ class TimeTableListVC: UIViewController, UITableViewDelegate {
     
     @IBOutlet weak private var detailsTableView: UITableView!
     
-    @IBOutlet weak private var sortBarButton: UIBarButtonItem!
+    @IBOutlet weak private var preferenceBarButton: UIBarButtonItem!
     
     // MARK: - Data
-    
+        
     internal var station: Station?
-    
+        
     // MARK: - Rx
     
     private var datasource = PublishSubject<[JourneyTimeTableInfo]>()
@@ -93,8 +93,8 @@ class TimeTableListVC: UIViewController, UITableViewDelegate {
         RxAlamofire.requestJSON(.get, urlString, headers: headers)
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { (_, json) in
+
                 let data = TimeTableInfo.parse(json)
-//                print("Data:", data)
 
                 var results: [JourneyTimeTableInfo] = []
                 data.forEach {
@@ -114,8 +114,29 @@ class TimeTableListVC: UIViewController, UITableViewDelegate {
     
     // MARK: - Action
     
-    @IBAction func sortAction(_ sender: Any) {
+    @IBAction func preferenceAction(_ sender: Any) {
         
+        let alertController = UIAlertController(title: "Select your display preference.",
+                                                message: nil,
+                                                preferredStyle: .alert)
+        
+        let options = Preference.getPreferenceList()
+        
+        options.forEach { option in
+            let alertAction = UIAlertAction(title: option.stringValue,
+                                            style: .default,
+                                            handler: { action in
+                Preference.defaultPreference = option
+            })
+            alertController.addAction(alertAction)
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel",
+                                        style: .cancel,
+                                        handler: nil)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
     }
     
     // MARK: - Rx Model
