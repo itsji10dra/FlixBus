@@ -63,7 +63,7 @@ class TimeTableListVC: UIViewController, UITableViewDelegate {
     
     // MARK: - Rx
     
-    private var results = PublishSubject<[JourneyTimeTableInfo]>()
+    private var datasource = PublishSubject<[JourneyTimeTableInfo]>()
 
     let disposeBag = DisposeBag()
     
@@ -102,7 +102,7 @@ class TimeTableListVC: UIViewController, UITableViewDelegate {
                     results.append(result)
                 }
                 
-                self.results.onNext(results)
+                self.datasource.onNext(results)
                 
             }, onError: { (error) in
                 print("Error:", error)
@@ -146,9 +146,17 @@ class TimeTableListVC: UIViewController, UITableViewDelegate {
         
         let dataSource = tableViewDataSource()
         
-        self.results.bind(to: detailsTableView.rx.items(dataSource: dataSource))
+        self.datasource
+            .bind(to: detailsTableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
         
+        self.datasource   //In-case of partial updates
+            .observeOn(MainScheduler.instance)
+            .subscribe { [weak self] (_) in
+                self?.detailsTableView.reloadData()
+            }
+            .disposed(by: disposeBag)
+
         detailsTableView.rx
             .modelSelected(TimeTableInfo.self)
             .subscribe(onNext:  { [weak self] timeTableInfo in
