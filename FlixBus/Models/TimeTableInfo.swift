@@ -57,7 +57,7 @@ struct DateTime: Mappable {
     
     // MARK: - Internal Methods
 
-    internal func getLocalTime() -> String? {
+    internal func getLocalTime(_ format: Date.Format) -> String? {
         
         guard let timeStamp = timeStamp else { return nil }
         
@@ -65,7 +65,7 @@ struct DateTime: Mappable {
         
         let date = Date(timeIntervalSince1970: timeInterval)
         
-        let stringDate = Date.string(from: date, format: .HH_colon_mm)
+        let stringDate = Date.string(from: date, format: format)
         
         return stringDate
     }

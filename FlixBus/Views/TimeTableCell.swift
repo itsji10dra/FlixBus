@@ -19,6 +19,7 @@ class TimeTableCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        timeLabel.numberOfLines = 2
         throughStationsLabel.numberOfLines = 0
     }
 
@@ -29,8 +30,11 @@ class TimeTableCell: UITableViewCell {
     
     func configure(data: TimeTableInfo) {
         
-        self.timeLabel.text = data.dateTimeInfo?.getLocalTime()
-        self.lineInfoLabel.text = (data.lineCode ?? "") + " " + (data.direction ?? "")
+        self.timeLabel.text = data.dateTimeInfo?.getLocalTime(.HH_colon_mm_line_dd_space_MMM_comma_space_yy)
+        
+        let lineInfoText = (data.lineCode ?? "") + " " + (data.direction ?? "")
+        self.lineInfoLabel.text = lineInfoText.trimmingCharacters(in: .whitespacesAndNewlines)
+        
         self.throughStationsLabel.text = data.throughStations
     }
 }

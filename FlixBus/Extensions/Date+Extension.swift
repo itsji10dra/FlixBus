@@ -42,8 +42,10 @@ extension Date {
         case d_space_MMM_space_yy                                   = "d MMM yy"
         case dd_space_MMM_comma_space_YY                            = "dd MMM, YY"
         case dd_space_MMM_comma_space_YYYY                          = "dd MMM, YYYY"
+        case dd_space_MMMM_comma_space_YYYY                         = "dd MMMM, YYYY"
         case yyyy_slash_MMM_slash_dd                                = "yyyy/MM/dd"
         case yyyy_colon_MM_colon_dd_space_HH_colon_mm               = "yyyy-MM-dd HH:mm"
+        case HH_colon_mm_line_dd_space_MMM_comma_space_yy           = "HH:mm\ndd MMM, yy"
         case yyyy_colon_MM_colon_dd_space_HH_colon_mm_colon_ss      = "yyyy-MM-dd HH:mm:ss"
         case yyyy_colon_MM_colon_dd_space_T_HH_colon_mm_colon_ss_Z  = "yyyy-MM-dd'T'HH:mm:ssZ"
     }
