@@ -141,7 +141,7 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="delegate" destination="2pY-rN-p4Y" id="yLs-Va-e7z"/>
+                                    <outlet property="delegate" destination="2pY-rN-p4Y" id="ywl-2B-ASL"/>
                                 </connections>
                             </tableView>
                         </subviews>

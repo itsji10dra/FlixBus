@@ -10,7 +10,7 @@ import ObjectMapper
 
 struct TimeTableInfo: Mappable {
     
-    private(set) var rideId: Int64?
+    private(set) var tripId: String?
     
     var throughStations: String?
     
@@ -29,7 +29,7 @@ struct TimeTableInfo: Mappable {
     }
     
     mutating func mapping(map: Map) {
-        rideId              <- map["ride_id"]
+        tripId              <- map["trip_uid"]
         throughStations     <- map["through_the_stations"]
         lineCode            <- map["line_code"]
         direction           <- map["direction"]

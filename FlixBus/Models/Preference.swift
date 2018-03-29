@@ -9,8 +9,8 @@
 import Foundation
 
 enum PreferenceOptions: Int {
-    case showArrivalsFirst = 0
-    case showDepartureFirst = 1
+    case showArrivalsFirst = 1
+    case showDepartureFirst = 2
     
     var stringValue: String {
         switch self {
@@ -20,13 +20,22 @@ enum PreferenceOptions: Int {
             return "Show Departure at top."
         }
     }
+    
+    var linkedJourneyType: JourneyType {
+        switch self {
+        case .showArrivalsFirst:
+            return .arrival
+        case .showDepartureFirst:
+            return .departure
+        }
+    }
 }
 
 struct Preference {
     
     static var defaultPreference: PreferenceOptions {
         set {
-            UserDefaults.standard.set(defaultPreference.rawValue, forKey: "PreferenceOptions")
+            UserDefaults.standard.set(newValue.rawValue, forKey: "PreferenceOptions")
         }
         get {
             let rawValue = UserDefaults.standard.integer(forKey: "PreferenceOptions")

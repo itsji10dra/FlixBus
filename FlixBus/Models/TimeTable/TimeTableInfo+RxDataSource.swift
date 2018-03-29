@@ -11,12 +11,12 @@ import RxDataSources
 extension TimeTableInfo: IdentifiableType, Equatable {
     
     // Identify is uniquely define an object
-    typealias Identity = Int64
-    var identity: Int64 {
-        return rideId ?? 0
+    typealias Identity = String
+    var identity: String {
+        return tripId ?? ""
     }
     
     static func ==(lhs: TimeTableInfo, rhs: TimeTableInfo) -> Bool {
-        return lhs.rideId == rhs.rideId
+        return lhs.tripId == rhs.tripId
     }
 }

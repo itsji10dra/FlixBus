@@ -63,9 +63,11 @@ class TimeTableListVC: UIViewController, UITableViewDelegate {
         
     // MARK: - Rx
     
-    private var datasource = PublishSubject<[JourneyTimeTableInfo]>()
+    private lazy var journeyInfoData: [JourneyType: [TimeTableInfo]] = [:]
+    
+    private var dataSource = PublishSubject<[JourneyTimeTableInfo]>()
 
-    let disposeBag = DisposeBag()
+    private let disposeBag = DisposeBag()
     
     // MARK: - View Hierarchy
 
@@ -92,24 +94,39 @@ class TimeTableListVC: UIViewController, UITableViewDelegate {
         
         RxAlamofire.requestJSON(.get, urlString, headers: headers)
             .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { (_, json) in
-
+            .subscribe(onNext: { [weak self] (_, json) in
                 let data = TimeTableInfo.parse(json)
-
-                var results: [JourneyTimeTableInfo] = []
-                data.forEach {
-                    let result = JourneyTimeTableInfo(journeyType: $0.key, timeTableData: $0.value)
-                    results.append(result)
-                }
-                
-                self.datasource.onNext(results)
-                
+                self?.journeyInfoData = data
+                self?.updateDataSourceForDefaultPreference()
             }, onError: { (error) in
                 print("Error:", error)
             }, onCompleted: {
                 LoadingIndicator.stopAnimating()
             })
             .disposed(by: disposeBag)
+    }
+
+    private func updateDataSourceForDefaultPreference() {
+        
+        var results: [JourneyTimeTableInfo] = []
+        
+        journeyInfoData.forEach {
+            let result = JourneyTimeTableInfo(journeyType: $0.key, timeTableData: $0.value)
+            results.append(result)
+        }
+        
+        let priorJourneyType = Preference.defaultPreference.linkedJourneyType
+        
+        if let priorInfoIndex = results.index(where: { journeyTimeTableInfo -> Bool in
+            return journeyTimeTableInfo.journeyType == priorJourneyType
+        }) {
+            let priorInfoObject = results.remove(at: priorInfoIndex)
+            results.insert(priorInfoObject, at: 0)
+        }
+    
+        DispatchQueue.main.async { [weak self]  in
+            self?.dataSource.onNext(results)
+        }
     }
     
     // MARK: - Action
@@ -125,8 +142,9 @@ class TimeTableListVC: UIViewController, UITableViewDelegate {
         options.forEach { option in
             let alertAction = UIAlertAction(title: option.stringValue,
                                             style: .default,
-                                            handler: { action in
+                                            handler: { [weak self] action in
                 Preference.defaultPreference = option
+                self?.updateDataSourceForDefaultPreference()
             })
             alertController.addAction(alertAction)
         }
@@ -167,18 +185,18 @@ class TimeTableListVC: UIViewController, UITableViewDelegate {
         
         let dataSource = tableViewDataSource()
         
-        self.datasource
+        self.dataSource
             .bind(to: detailsTableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
         
-        self.datasource   //In-case of partial updates
+        self.dataSource                                //In-case of partial updates
             .observeOn(MainScheduler.instance)
-            .subscribe { [weak self] (_) in
+            .subscribe { [weak self] _ in
                 self?.detailsTableView.reloadData()
             }
             .disposed(by: disposeBag)
 
-        detailsTableView.rx
+        self.detailsTableView.rx
             .modelSelected(TimeTableInfo.self)
             .subscribe(onNext:  { [weak self] timeTableInfo in
                 self?.showRouteInfo(with: timeTableInfo)
