@@ -63,7 +63,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Station" id="Adc-hD-XoI"/>
+                    <navigationItem key="navigationItem" title="Stations" id="Adc-hD-XoI"/>
                     <connections>
                         <outlet property="stationTableView" destination="wAt-DK-TsV" id="Ggd-zm-G4a"/>
                         <segue destination="2pY-rN-p4Y" kind="show" identifier="TimeTableListSegue" id="jtP-ap-JQs"/>
