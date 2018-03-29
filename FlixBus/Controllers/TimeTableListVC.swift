@@ -131,11 +131,17 @@ class TimeTableListVC: UIViewController, UITableViewDelegate {
     
     @IBAction func preferenceAction(_ sender: Any) {
         
-        let alertController = UIAlertController(title: "Select your display preference.",
+        let alertController = UIAlertController(title: "Display preference.",
                                                 message: nil,
                                                 preferredStyle: .alert)
         
-        let options = Preference.getPreferenceList()
+        let currentPrefJourneyType = Preference.defaultPreference.linkedJourneyType
+        
+        var options = Preference.getPreferenceList()
+        
+        if let indexCurrentPref = options.index(where: { $0.linkedJourneyType == currentPrefJourneyType }) {
+            options.remove(at: indexCurrentPref)
+        }
         
         options.forEach { option in
             let alertAction = UIAlertAction(title: option.stringValue,
@@ -159,9 +165,9 @@ class TimeTableListVC: UIViewController, UITableViewDelegate {
 
     private func tableViewDataSource() -> RxTableViewSectionedAnimatedDataSource<JourneyTimeTableInfo> {
         
-        let animationConfiguration = AnimationConfiguration(insertAnimation: .fade,
-                                                            reloadAnimation: .automatic,
-                                                            deleteAnimation: .fade)
+        let animationConfiguration = AnimationConfiguration(insertAnimation: .automatic,
+                                                            reloadAnimation: .none,
+                                                            deleteAnimation: .automatic)
         
         return RxTableViewSectionedAnimatedDataSource<JourneyTimeTableInfo>(
                 animationConfiguration: animationConfiguration,
