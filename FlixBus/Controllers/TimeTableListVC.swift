@@ -124,9 +124,7 @@ class TimeTableListVC: UIViewController, UITableViewDelegate {
             results.insert(priorInfoObject, at: 0)
         }
     
-        DispatchQueue.main.async { [weak self]  in
-            self?.dataSource.onNext(results)
-        }
+        self.dataSource.onNext(results)
     }
     
     // MARK: - Action
