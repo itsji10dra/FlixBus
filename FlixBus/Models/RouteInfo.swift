@@ -10,7 +10,7 @@ import ObjectMapper
 
 struct RouteInfo: Mappable {
     
-    var routeId: Int64?
+    private(set) var routeId: Int64?
     
     var name: String?
     
