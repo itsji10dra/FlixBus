@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 class RouteInfoView: UIView {
     
@@ -18,7 +19,7 @@ class RouteInfoView: UIView {
 
     // MARK: - Data
     
-    private var coordinates: Coordinates?
+    private var mapCompletionBlock: (() -> Void)?
 
     // MARK: - Init
     
@@ -52,6 +53,7 @@ class RouteInfoView: UIView {
 
     @IBAction func navigateToMapAction(_ sender: Any) {
         
+        mapCompletionBlock?()
     }
     
     // MARK: - Internal Methods
@@ -60,7 +62,16 @@ class RouteInfoView: UIView {
         
         nameLabel.text = route.name
         addressLabel.text = route.fullAddress
-        coordinates = route.coordinates
+        
+        mapCompletionBlock = {
+            guard let latitude = route.coordinates?.latitude,
+                let longitude = route.coordinates?.longitude else { return  }
+            
+            let coordinate = CLLocationCoordinate2DMake(latitude, longitude);
+            let placemark = MKPlacemark(coordinate: coordinate, addressDictionary: nil)
+            let mapItem = MKMapItem(placemark: placemark)
+            mapItem.name = route.name
+            mapItem.openInMaps(launchOptions: nil)
+        }
     }
-
 }
