@@ -17,7 +17,6 @@ target 'FlixBus' do
   
   #UI
   pod 'NVActivityIndicatorView'
-  pod 'AlamofireNetworkActivityIndicator', '~> 2.2'
   
   target 'FlixBusTests' do
     inherit! :search_paths
