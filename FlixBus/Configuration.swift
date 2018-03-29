@@ -21,36 +21,14 @@ struct Configuration {
     static private let url = "http://api.mobile.staging.mfb.io"
 
     static private let authenticationToken = "intervIEW_TOK3n"
-
-    static private func getFilledResourcePath(_ path: ResourcePath, parameters: [String]) -> String {
-
-        let toRemoveCharacter = "%@"
-        
-        var stringPath = path.rawValue
-        
-        let parametersRequired = path.rawValue.components(separatedBy: toRemoveCharacter).count - 1
-        let parametersReceived = parameters.count
-
-        guard parametersRequired == parametersReceived else {
-            fatalError("Wrong number of parameters passed")
-        }
-        
-        parameters.forEach { parameter in
-            if let range = stringPath.range(of: toRemoveCharacter) {
-                stringPath = stringPath.replacingCharacters(in: range, with: parameter)
-            }
-        }
-        
-        return stringPath
-    }
     
     // MARK: - Public
     
     static public func getURL(forResource path: ResourcePath, parameters: [String]) -> String {
-        return url + getFilledResourcePath(.timeTable, parameters: parameters)
+        return url + ParsingHelper.replace(path.rawValue, with: parameters)
     }
     
     static public func getHeaders() -> [String: String] {
-        return [Header.apiAuthentication.rawValue: Configuration.authenticationToken]
+        return [Header.apiAuthentication.rawValue: authenticationToken]
     }
 }
