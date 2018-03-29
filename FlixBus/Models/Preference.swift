@@ -9,6 +9,7 @@
 import Foundation
 
 enum PreferenceOptions: Int {
+    
     case showArrivalsFirst = 1
     case showDepartureFirst = 2
     

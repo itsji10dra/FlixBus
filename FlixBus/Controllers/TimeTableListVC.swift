@@ -87,8 +87,8 @@ class TimeTableListVC: UIViewController, UITableViewDelegate {
         
         guard let stationId = station?.id else { return }
         
-        let urlString = Configuration.url + Configuration.getFilledResourcePath(.timeTable, parameters: [String(stationId)])
-        let headers: [String:String] = [Header.apiAuthentication.rawValue:Configuration.authenticationToken]
+        let urlString = Configuration.getURL(forResource: .timeTable, parameters: [String(stationId)])
+        let headers = Configuration.getHeaders()
 
         LoadingIndicator.startAnimating()
         

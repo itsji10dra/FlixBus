@@ -16,11 +16,13 @@ enum ResourcePath: String {
 
 struct Configuration {
 
-    static let url = "http://api.mobile.staging.mfb.io"
+    // MARK: - Private
 
-    static let authenticationToken = "intervIEW_TOK3n"
+    static private let url = "http://api.mobile.staging.mfb.io"
 
-    static func getFilledResourcePath(_ path: ResourcePath, parameters: [String]) -> String {
+    static private let authenticationToken = "intervIEW_TOK3n"
+
+    static private func getFilledResourcePath(_ path: ResourcePath, parameters: [String]) -> String {
 
         let toRemoveCharacter = "%@"
         
@@ -40,5 +42,15 @@ struct Configuration {
         }
         
         return stringPath
+    }
+    
+    // MARK: - Public
+    
+    static public func getURL(forResource path: ResourcePath, parameters: [String]) -> String {
+        return url + getFilledResourcePath(.timeTable, parameters: parameters)
+    }
+    
+    static public func getHeaders() -> [String: String] {
+        return [Header.apiAuthentication.rawValue: Configuration.authenticationToken]
     }
 }
