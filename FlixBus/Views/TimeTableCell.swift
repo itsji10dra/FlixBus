@@ -12,9 +12,9 @@ class TimeTableCell: UITableViewCell {
 
     // MARK: - IBOutlets
     
-    @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var lineInfoLabel: UILabel!
-    @IBOutlet weak var throughStationsLabel: UILabel!
+    @IBOutlet weak private var timeLabel: UILabel!
+    @IBOutlet weak private var lineInfoLabel: UILabel!
+    @IBOutlet weak private var throughStationsLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

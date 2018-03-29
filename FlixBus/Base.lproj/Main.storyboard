@@ -148,11 +148,54 @@
                     </view>
                     <connections>
                         <outlet property="detailsTableView" destination="0TL-JO-mMX" id="sEi-2P-hJP"/>
+                        <segue destination="oop-QF-ffD" kind="show" identifier="RouteInfoSegue" id="pcS-s0-h1e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X9z-lf-2ld" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1213.5999999999999" y="30.134932533733135"/>
+        </scene>
+        <!--Route InfoVC-->
+        <scene sceneID="WNA-8o-5cA">
+            <objects>
+                <viewController storyboardIdentifier="RouteInfo" id="oop-QF-ffD" customClass="RouteInfoVC" customModule="FlixBus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TSN-jU-7uM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NXA-vH-rot">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="L4r-Ey-Irp">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="L4r-Ey-Irp" secondAttribute="trailing" id="32K-WO-EvW"/>
+                                    <constraint firstItem="L4r-Ey-Irp" firstAttribute="leading" secondItem="NXA-vH-rot" secondAttribute="leading" id="R9S-dA-jXc"/>
+                                    <constraint firstItem="L4r-Ey-Irp" firstAttribute="height" secondItem="NXA-vH-rot" secondAttribute="height" placeholder="YES" id="RQx-Kt-Obz"/>
+                                    <constraint firstItem="L4r-Ey-Irp" firstAttribute="top" secondItem="NXA-vH-rot" secondAttribute="top" id="Zuh-dw-2dF"/>
+                                    <constraint firstItem="L4r-Ey-Irp" firstAttribute="width" secondItem="NXA-vH-rot" secondAttribute="width" id="eXE-kf-kR4"/>
+                                    <constraint firstAttribute="bottom" secondItem="L4r-Ey-Irp" secondAttribute="bottom" id="pfa-Y3-tdh"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NXA-vH-rot" firstAttribute="top" secondItem="LPx-IS-9YR" secondAttribute="top" id="55J-bl-4NX"/>
+                            <constraint firstItem="NXA-vH-rot" firstAttribute="leading" secondItem="LPx-IS-9YR" secondAttribute="leading" id="JGX-Ws-Da3"/>
+                            <constraint firstItem="LPx-IS-9YR" firstAttribute="bottom" secondItem="NXA-vH-rot" secondAttribute="bottom" id="Z4c-PK-otn"/>
+                            <constraint firstItem="LPx-IS-9YR" firstAttribute="trailing" secondItem="NXA-vH-rot" secondAttribute="trailing" id="fk5-N2-QtC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LPx-IS-9YR"/>
+                    </view>
+                    <connections>
+                        <outlet property="routeStackView" destination="L4r-Ey-Irp" id="HYj-TH-Iry"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kpt-JR-lWk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2059" y="34"/>
         </scene>
     </scenes>
 </document>

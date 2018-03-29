@@ -90,7 +90,8 @@ class TimeTableListVC: UIViewController, UITableViewDelegate {
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { (_, json) in
                 let data = TimeTableInfo.parse(json)
-                
+//                print("Data:", data)
+
                 var results: [JourneyTimeTableInfo] = []
                 data.forEach {
                     let result = JourneyTimeTableInfo(journeyType: $0.key, timeTableData: $0.value)
@@ -135,7 +136,26 @@ class TimeTableListVC: UIViewController, UITableViewDelegate {
         
         let dataSource = tableViewDataSource()
         
-        self.results.bind(to: self.detailsTableView.rx.items(dataSource: dataSource))
+        self.results.bind(to: detailsTableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
+        
+        detailsTableView.rx
+            .modelSelected(TimeTableInfo.self)
+            .subscribe(onNext:  { [weak self] timeTableInfo in
+                guard let routes = timeTableInfo.routeInfo else { return }
+                self?.showRouteInfo(for: routes)
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    // MARK: - Navigation
+    
+    private func showRouteInfo(for routes: [RouteInfo]) {
+        
+        guard let routeInfoVC = Navigation.getViewController(type: RouteInfoVC.self, identifer: "RouteInfo") else { return }
+        
+        routeInfoVC.routes = routes
+
+        navigationController?.pushViewController(routeInfoVC, animated: true)
     }
 }

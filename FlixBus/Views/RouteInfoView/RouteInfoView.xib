@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RouteInfoView" customModule="FlixBus" customModuleProvider="target">
+            <connections>
+                <outlet property="addressLabel" destination="Gfu-sU-OgR" id="9pT-rw-4lP"/>
+                <outlet property="mapButton" destination="zfc-An-Q5H" id="8jC-gU-buT"/>
+                <outlet property="nameLabel" destination="AWw-mf-jWv" id="Mb1-DQ-vp2"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="LA2-OC-xlg">
+            <rect key="frame" x="0.0" y="0.0" width="419" height="140"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EjO-CD-i5r">
+                    <rect key="frame" x="15" y="0.0" width="419" height="140"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="nPK-Oe-2Cr">
+                            <rect key="frame" x="0.0" y="0.0" width="419" height="40"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUB-nN-fWO">
+                                    <rect key="frame" x="0.0" y="0.0" width="75" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="75" id="VBH-nd-GZp"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWw-mf-jWv">
+                                    <rect key="frame" x="80" y="0.0" width="419" height="40"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="9qn-21-Dvg"/>
+                            </constraints>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="OVH-AR-wUN">
+                            <rect key="frame" x="0.0" y="40" width="419" height="50"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dh1-fh-InE">
+                                    <rect key="frame" x="0.0" y="0.0" width="75" height="20.5"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="75" id="ZHE-Sg-7X8"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gfu-sU-OgR">
+                                    <rect key="frame" x="80" y="0.0" width="419" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfc-An-Q5H">
+                            <rect key="frame" x="0.0" y="90" width="419" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="7LG-UO-oLg"/>
+                            </constraints>
+                            <state key="normal" title="See on Map"/>
+                            <connections>
+                                <action selector="navigateToMapAction:" destination="-1" eventType="touchUpInside" id="fP0-4e-Jdu"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="iTX-ZW-is5"/>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="iDE-10-dLj" firstAttribute="trailing" secondItem="EjO-CD-i5r" secondAttribute="trailing" constant="15" id="AmR-Hs-X5C"/>
+                <constraint firstAttribute="bottom" secondItem="EjO-CD-i5r" secondAttribute="bottom" id="RW7-Wx-21l"/>
+                <constraint firstItem="EjO-CD-i5r" firstAttribute="top" secondItem="LA2-OC-xlg" secondAttribute="top" id="WdV-J2-00F"/>
+                <constraint firstItem="EjO-CD-i5r" firstAttribute="leading" secondItem="LA2-OC-xlg" secondAttribute="leading" constant="15" id="WeI-Ke-FQN"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="iDE-10-dLj"/>
+            <point key="canvasLocation" x="-209.5" y="-247"/>
+        </view>
+    </objects>
+</document>

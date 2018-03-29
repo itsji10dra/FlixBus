@@ -20,6 +20,8 @@ struct TimeTableInfo: Mappable {
     
     var dateTimeInfo: DateTime?
     
+    var routeInfo: [RouteInfo]?
+    
     init?(map: Map) {
         
     }
@@ -30,6 +32,7 @@ struct TimeTableInfo: Mappable {
         lineCode            <- map["line_code"]
         direction           <- map["direction"]
         dateTimeInfo        <- map["datetime"]
+        routeInfo           <- map["route"]
     }
 }
 
