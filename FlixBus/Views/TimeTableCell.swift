@@ -33,9 +33,9 @@ class TimeTableCell: UITableViewCell {
         let time = data.dateTimeInfo?.getLocalTime(.HH_colon_mm_line_dd_space_MMM_comma_space_yy)
         self.timeLabel.text = time?.trimmingCharacters(in: .whitespacesAndNewlines)
         
-        let lineInfoText = (data.lineCode ?? "") + " " + (data.direction ?? "")
+        let lineInfoText = "Line " + (data.lineCode ?? "") + " direction " + (data.direction ?? "")
         self.lineInfoLabel.text = lineInfoText.trimmingCharacters(in: .whitespacesAndNewlines)
         
-        self.throughStationsLabel.text = data.throughStations
+        self.throughStationsLabel.text = "to " + (data.throughStations ?? "")
     }
 }
