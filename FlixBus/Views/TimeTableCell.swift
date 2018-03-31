@@ -20,6 +20,7 @@ class TimeTableCell: UITableViewCell {
         super.awakeFromNib()
         
         timeLabel.numberOfLines = 2
+        lineInfoLabel.numberOfLines = 2
         throughStationsLabel.numberOfLines = 0
     }
 
