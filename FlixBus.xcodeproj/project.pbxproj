@@ -34,6 +34,7 @@
 		10CC627020701FBB00D165E5 /* TimeTableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CC626F20701FBB00D165E5 /* TimeTableTests.swift */; };
 		10CC62722070271800D165E5 /* DateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CC62712070271800D165E5 /* DateTime.swift */; };
 		10CC62742070273D00D165E5 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CC62732070273D00D165E5 /* Coordinates.swift */; };
+		10CC6276207027D100D165E5 /* RouteInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CC6275207027D100D165E5 /* RouteInfoTests.swift */; };
 		10D4FE67206C1AAE00C22937 /* TimeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D4FE66206C1AAE00C22937 /* TimeTableCell.swift */; };
 		10D4FE69206C240F00C22937 /* TimeTableInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D4FE68206C240F00C22937 /* TimeTableInfo.swift */; };
 		10D4FE6B206C2C4C00C22937 /* TimeTableInfo+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D4FE6A206C2C4C00C22937 /* TimeTableInfo+JSON.swift */; };
@@ -94,6 +95,7 @@
 		10CC626F20701FBB00D165E5 /* TimeTableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableTests.swift; sourceTree = "<group>"; };
 		10CC62712070271800D165E5 /* DateTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTime.swift; sourceTree = "<group>"; };
 		10CC62732070273D00D165E5 /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
+		10CC6275207027D100D165E5 /* RouteInfoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteInfoTests.swift; sourceTree = "<group>"; };
 		10D4FE66206C1AAE00C22937 /* TimeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableCell.swift; sourceTree = "<group>"; };
 		10D4FE68206C240F00C22937 /* TimeTableInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableInfo.swift; sourceTree = "<group>"; };
 		10D4FE6A206C2C4C00C22937 /* TimeTableInfo+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeTableInfo+JSON.swift"; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 				1062771D206E3010009AB6A9 /* ParsingHelperTests.swift */,
 				10CC626D20701A6C00D165E5 /* StationTests.swift */,
 				10CC626F20701FBB00D165E5 /* TimeTableTests.swift */,
+				10CC6275207027D100D165E5 /* RouteInfoTests.swift */,
 				108558AF206BED1F00601CF7 /* Info.plist */,
 			);
 			path = FlixBusTests;
@@ -668,6 +671,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1062771E206E3010009AB6A9 /* ParsingHelperTests.swift in Sources */,
+				10CC6276207027D100D165E5 /* RouteInfoTests.swift in Sources */,
 				10CC627020701FBB00D165E5 /* TimeTableTests.swift in Sources */,
 				10CC626E20701A6C00D165E5 /* StationTests.swift in Sources */,
 			);
