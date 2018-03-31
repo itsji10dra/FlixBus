@@ -48,6 +48,12 @@ class RouteInfoVC: UIViewController {
         label.textAlignment = .center
         label.numberOfLines = 2
         
+        if #available(iOS 11, *) {
+            //iOS 11 is smart. Nothing to do.
+        } else {
+            label.frame = .init(x: 0, y: 0, width: 150, height: 64)     //Requires for iOS 10 and lower.
+        }
+        
         let text = NSMutableAttributedString()
         text.append(NSAttributedString(string: title, attributes: [.font : UIFont.boldSystemFont(ofSize: titleSize)]))
         text.append(NSAttributedString(string: "\n\(subtitle)", attributes: [.font : UIFont.systemFont(ofSize: subtitleSize)]))
