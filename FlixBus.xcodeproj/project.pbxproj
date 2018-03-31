@@ -32,6 +32,8 @@
 		108558D2206C001C00601CF7 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108558D1206C001C00601CF7 /* Navigation.swift */; };
 		10CC626E20701A6C00D165E5 /* StationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CC626D20701A6C00D165E5 /* StationTests.swift */; };
 		10CC627020701FBB00D165E5 /* TimeTableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CC626F20701FBB00D165E5 /* TimeTableTests.swift */; };
+		10CC62722070271800D165E5 /* DateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CC62712070271800D165E5 /* DateTime.swift */; };
+		10CC62742070273D00D165E5 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CC62732070273D00D165E5 /* Coordinates.swift */; };
 		10D4FE67206C1AAE00C22937 /* TimeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D4FE66206C1AAE00C22937 /* TimeTableCell.swift */; };
 		10D4FE69206C240F00C22937 /* TimeTableInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D4FE68206C240F00C22937 /* TimeTableInfo.swift */; };
 		10D4FE6B206C2C4C00C22937 /* TimeTableInfo+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D4FE6A206C2C4C00C22937 /* TimeTableInfo+JSON.swift */; };
@@ -90,6 +92,8 @@
 		108558D1206C001C00601CF7 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		10CC626D20701A6C00D165E5 /* StationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationTests.swift; sourceTree = "<group>"; };
 		10CC626F20701FBB00D165E5 /* TimeTableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableTests.swift; sourceTree = "<group>"; };
+		10CC62712070271800D165E5 /* DateTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTime.swift; sourceTree = "<group>"; };
+		10CC62732070273D00D165E5 /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
 		10D4FE66206C1AAE00C22937 /* TimeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableCell.swift; sourceTree = "<group>"; };
 		10D4FE68206C240F00C22937 /* TimeTableInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableInfo.swift; sourceTree = "<group>"; };
 		10D4FE6A206C2C4C00C22937 /* TimeTableInfo+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeTableInfo+JSON.swift"; sourceTree = "<group>"; };
@@ -291,6 +295,8 @@
 				101D3227206CD6260038DAD7 /* Station */,
 				101D3228206CD62E0038DAD7 /* TimeTable */,
 				101D3215206CAEBB0038DAD7 /* RouteInfo.swift */,
+				10CC62712070271800D165E5 /* DateTime.swift */,
+				10CC62732070273D00D165E5 /* Coordinates.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -639,6 +645,7 @@
 				10855899206BED1E00601CF7 /* AppDelegate.swift in Sources */,
 				108558CF206BF2FC00601CF7 /* Configuration.swift in Sources */,
 				101D321A206CB7D30038DAD7 /* RouteInfoView.swift in Sources */,
+				10CC62742070273D00D165E5 /* Coordinates.swift in Sources */,
 				10D4FE69206C240F00C22937 /* TimeTableInfo.swift in Sources */,
 				101D3226206CD6210038DAD7 /* Station+JSON.swift in Sources */,
 				108558C7206BEDC600601CF7 /* StationsListVC.swift in Sources */,
@@ -651,6 +658,7 @@
 				101D322C206CEADD0038DAD7 /* ParsingHelper.swift in Sources */,
 				108558CD206BF27500601CF7 /* Station.swift in Sources */,
 				10D4FE6B206C2C4C00C22937 /* TimeTableInfo+JSON.swift in Sources */,
+				10CC62722070271800D165E5 /* DateTime.swift in Sources */,
 				108558C9206BF1F700601CF7 /* TimeTableListVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

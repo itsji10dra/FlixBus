@@ -34,21 +34,3 @@ struct RouteInfo: Mappable {
         coordinates     <- map["coordinates"]
     }
 }
-
-struct Coordinates: Mappable {
-    
-    var latitude: Double?
-    
-    var longitude: Double?
-
-    // MARK: - Mappable
-
-    init?(map: Map) {
-        
-    }
-    
-    mutating func mapping(map: Map) {
-        latitude        <- map["latitude"]
-        longitude       <- map["longitude"]
-    }
-}
