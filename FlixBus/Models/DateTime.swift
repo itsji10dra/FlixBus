@@ -35,7 +35,9 @@ struct DateTime: Mappable {
         
         let date = Date(timeIntervalSince1970: timeInterval)
         
-        let stringDate = Date.string(from: date, format: format)
+        let timezone = TimeZoneService.timeZone(offset: self.timeZone) ?? .current
+        
+        let stringDate = Date.string(from: date, format: format, timeZone: timezone)
         
         return stringDate
     }

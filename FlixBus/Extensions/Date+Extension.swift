@@ -12,7 +12,7 @@ extension Date {
 
     static let formatter = DateFormatter()
 
-    static let gmtTimeZone = TimeZone(abbreviation: "GMT")!
+    static let currentTimeZone = TimeZone.current
 
     enum Format: String {
 
@@ -48,7 +48,7 @@ extension Date {
         case yyyy_colon_MM_colon_dd_space_T_HH_colon_mm_colon_ss_Z  = "yyyy-MM-dd'T'HH:mm:ssZ"
     }
 
-    static func string(from date: Date?, format: Format, timeZone: TimeZone = gmtTimeZone) -> String? {
+    static func string(from date: Date?, format: Format, timeZone: TimeZone = currentTimeZone) -> String? {
 
         guard let date = date else { return nil }
         formatter.dateFormat = format.rawValue
@@ -56,7 +56,7 @@ extension Date {
         return formatter.string(from: date)
     }
 
-    static func date(from string: String?, format: Format, timeZone: TimeZone = gmtTimeZone) -> Date? {
+    static func date(from string: String?, format: Format, timeZone: TimeZone = currentTimeZone) -> Date? {
 
         guard let string = string else { return nil }
         formatter.dateFormat = format.rawValue

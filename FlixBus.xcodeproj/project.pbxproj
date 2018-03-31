@@ -18,6 +18,7 @@
 		101D322A206CE8250038DAD7 /* Station.plist in Resources */ = {isa = PBXBuildFile; fileRef = 101D3229206CE8250038DAD7 /* Station.plist */; };
 		101D322C206CEADD0038DAD7 /* ParsingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101D322B206CEADD0038DAD7 /* ParsingHelper.swift */; };
 		101D322F206CF2630038DAD7 /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101D322E206CF2630038DAD7 /* Preference.swift */; };
+		1054B49E20703FA7008184E0 /* TimeZoneService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1054B49D20703FA7008184E0 /* TimeZoneService.swift */; };
 		1062771E206E3010009AB6A9 /* ParsingHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1062771D206E3010009AB6A9 /* ParsingHelperTests.swift */; };
 		10627720206E33E2009AB6A9 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 1062771F206E33E2009AB6A9 /* test.json */; };
 		10855899206BED1E00601CF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10855898206BED1E00601CF7 /* AppDelegate.swift */; };
@@ -73,6 +74,7 @@
 		101D3229206CE8250038DAD7 /* Station.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Station.plist; sourceTree = "<group>"; };
 		101D322B206CEADD0038DAD7 /* ParsingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsingHelper.swift; sourceTree = "<group>"; };
 		101D322E206CF2630038DAD7 /* Preference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
+		1054B49D20703FA7008184E0 /* TimeZoneService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneService.swift; sourceTree = "<group>"; };
 		1062771D206E3010009AB6A9 /* ParsingHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsingHelperTests.swift; sourceTree = "<group>"; };
 		1062771F206E33E2009AB6A9 /* test.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
 		10855895206BED1E00601CF7 /* FlixBus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlixBus.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				101D322B206CEADD0038DAD7 /* ParsingHelper.swift */,
+				1054B49D20703FA7008184E0 /* TimeZoneService.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -641,6 +644,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1054B49E20703FA7008184E0 /* TimeZoneService.swift in Sources */,
 				10D4FE71206C351F00C22937 /* TimeTableInfo+RxDataSource.swift in Sources */,
 				10D4FE6F206C307700C22937 /* LoadingIndicator.swift in Sources */,
 				101D321F206CB8AD0038DAD7 /* UIView+Extension.swift in Sources */,
