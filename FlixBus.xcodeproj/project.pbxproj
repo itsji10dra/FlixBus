@@ -18,6 +18,8 @@
 		101D322A206CE8250038DAD7 /* Station.plist in Resources */ = {isa = PBXBuildFile; fileRef = 101D3229206CE8250038DAD7 /* Station.plist */; };
 		101D322C206CEADD0038DAD7 /* ParsingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101D322B206CEADD0038DAD7 /* ParsingHelper.swift */; };
 		101D322F206CF2630038DAD7 /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101D322E206CF2630038DAD7 /* Preference.swift */; };
+		1062771E206E3010009AB6A9 /* ParsingHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1062771D206E3010009AB6A9 /* ParsingHelperTests.swift */; };
+		10627720206E33E2009AB6A9 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 1062771F206E33E2009AB6A9 /* test.json */; };
 		10855899206BED1E00601CF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10855898206BED1E00601CF7 /* AppDelegate.swift */; };
 		1085589E206BED1F00601CF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1085589C206BED1F00601CF7 /* Main.storyboard */; };
 		108558A0206BED1F00601CF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1085589F206BED1F00601CF7 /* Assets.xcassets */; };
@@ -67,6 +69,8 @@
 		101D3229206CE8250038DAD7 /* Station.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Station.plist; sourceTree = "<group>"; };
 		101D322B206CEADD0038DAD7 /* ParsingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsingHelper.swift; sourceTree = "<group>"; };
 		101D322E206CF2630038DAD7 /* Preference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
+		1062771D206E3010009AB6A9 /* ParsingHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsingHelperTests.swift; sourceTree = "<group>"; };
+		1062771F206E33E2009AB6A9 /* test.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
 		10855895206BED1E00601CF7 /* FlixBus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlixBus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10855898206BED1E00601CF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1085589D206BED1F00601CF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -249,7 +253,9 @@
 		108558AC206BED1F00601CF7 /* FlixBusTests */ = {
 			isa = PBXGroup;
 			children = (
+				10CC626C2070171900D165E5 /* Resources */,
 				108558AD206BED1F00601CF7 /* FlixBusTests.swift */,
+				1062771D206E3010009AB6A9 /* ParsingHelperTests.swift */,
 				108558AF206BED1F00601CF7 /* Info.plist */,
 			);
 			path = FlixBusTests;
@@ -284,6 +290,14 @@
 				101D3215206CAEBB0038DAD7 /* RouteInfo.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		10CC626C2070171900D165E5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1062771F206E33E2009AB6A9 /* test.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		10D4FE65206C1A7600C22937 /* Views */ = {
@@ -433,6 +447,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10627720206E33E2009AB6A9 /* test.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -641,6 +656,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1062771E206E3010009AB6A9 /* ParsingHelperTests.swift in Sources */,
 				108558AE206BED1F00601CF7 /* FlixBusTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

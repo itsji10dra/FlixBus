@@ -16,9 +16,9 @@ enum PreferenceOptions: Int {
     var stringValue: String {
         switch self {
         case .showArrivalsFirst:
-            return "Show Arrivals on top"
+            return "Show arrivals on top"
         case .showDepartureFirst:
-            return "Show Departure on top"
+            return "Show departure on top"
         }
     }
     
