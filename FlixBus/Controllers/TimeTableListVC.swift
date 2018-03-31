@@ -98,8 +98,9 @@ class TimeTableListVC: UIViewController, UITableViewDelegate {
                 let data = TimeTableInfo.parse(json)
                 self?.journeyInfoData = data
                 self?.updateDataSourceForDefaultPreference()
-            }, onError: { (error) in
-                print("Error:", error)
+            }, onError: { [weak self] error in
+                LoadingIndicator.stopAnimating()
+                self?.showNetworkErrorAlert(with: error.localizedDescription)
             }, onCompleted: {
                 LoadingIndicator.stopAnimating()
             })
@@ -125,6 +126,25 @@ class TimeTableListVC: UIViewController, UITableViewDelegate {
         }
     
         self.dataSource.onNext(results)
+    }
+    
+    private func showNetworkErrorAlert(with message: String) {
+        
+        let alertController = UIAlertController(title: "Error",
+                                                message: message,
+                                                preferredStyle: .alert)
+        
+        let retryAction = UIAlertAction(title: "Retry", style: .default) { [weak self] action in
+            self?.loadTimeTable()
+        }
+        alertController.addAction(retryAction)
+        
+        let goBackAction = UIAlertAction(title: "Go Back", style: .cancel) { [weak self] action in
+            self?.navigationController?.popViewController(animated: true)
+        }
+        alertController.addAction(goBackAction)
+
+        present(alertController, animated: true, completion: nil)
     }
     
     // MARK: - Action
