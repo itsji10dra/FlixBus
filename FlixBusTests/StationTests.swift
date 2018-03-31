@@ -26,6 +26,7 @@ class StationTests: XCTestCase {
     
     func testInitMap() {
         
+        //--------- Case 1 ---------//
         var stationJSONString = "{\"id\":1,\"name\":\"Berlin\"}"
         let station1 = Mapper<Station>().map(JSONString: stationJSONString)
         
@@ -37,6 +38,7 @@ class StationTests: XCTestCase {
             XCTAssert(true, "Nil Values Found")
         }
         
+        //--------- Case 2 ---------//
         stationJSONString = "{\"id\":1234567898765,\"name\":\"New York\"}"
         let station2 = Mapper<Station>().map(JSONString: stationJSONString)
         
@@ -48,6 +50,7 @@ class StationTests: XCTestCase {
             XCTAssert(true, "Nil Values Found")
         }
         
+        //--------- Case 3 ---------//
         stationJSONString = "{\"id\":1234587652378993456,\"name\":\"Llanfairpwllgwyngyll\"}"
         let station3 = Mapper<Station>().map(JSONString: stationJSONString)
         
