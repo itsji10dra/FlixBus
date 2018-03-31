@@ -56,7 +56,7 @@ struct DateTime: Mappable {
     }
     
     // MARK: - Internal Methods
-
+ 
     internal func getLocalTime(_ format: Date.Format) -> String? {
         
         guard let timeStamp = timeStamp else { return nil }

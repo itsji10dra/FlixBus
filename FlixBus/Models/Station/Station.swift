@@ -10,7 +10,7 @@ import ObjectMapper
 
 struct Station: Mappable {
     
-    private(set) var id: Int?
+    private(set) var id: Int64?
     
     var name: String?
     
