@@ -1,13 +1,13 @@
-### FlixBus
+# FlixBus
 
 
-## Pre-Requisites:
+### Pre-Requisites:
 
 1. Xcode v9/9+
 2. Pods v1.4.0 (https://guides.cocoapods.org/using/getting-started.html)
 
 
-## Installation:
+### Installation:
 
 1. Open terminal
 2. cd path-to-project (i.e. ../FlixBus/)
