@@ -1,13 +1,16 @@
-Pre-Requisites:
-
-a) Xcode v9/9+
-b) Pods v1.4.0 (https://guides.cocoapods.org/using/getting-started.html)
+### FlixBus
 
 
-Installation:
+## Pre-Requisites:
 
-a) Open terminal
-b) cd path-to-project (i.e. /FlixBus_Assignment/FlixBus/)
-c) pod install
-d) open FlixBus.xcworkspace
-e) Select 'Simulator/Device' in Xcode, & hit command+R
+1. Xcode v9/9+
+2. Pods v1.4.0 (https://guides.cocoapods.org/using/getting-started.html)
+
+
+## Installation:
+
+1. Open terminal
+2. cd path-to-project (i.e. ../FlixBus/)
+3. pod install
+4. open FlixBus.xcworkspace
+5. Select 'Simulator/Device' in Xcode, & hit command+R
