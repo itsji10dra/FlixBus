@@ -6,31 +6,21 @@
 //  Copyright © 2018 Jitendra Gandhi. All rights reserved.
 //
 
-import ObjectMapper
+import Foundation
 
-struct DateTime: Mappable {
+struct DateTime: Decodable {
     
-    private var timeStamp: Int64?
+    let timeStamp: Int64
     
-    private var timeZone: String?
+    let timeZone: String
     
-    // MARK: - Mappable
-    
-    init?(map: Map) {
-        
+    enum CodingKeys: String, CodingKey {
+        case timeStamp = "timestamp"
+        case timeZone = "tz"
     }
-    
-    mutating func mapping(map: Map) {
-        timeStamp       <- map["timestamp"]
-        timeZone        <- map["tz"]
-    }
-    
-    // MARK: - Internal Methods
-    
+
     internal func getLocalTime(_ format: Date.Format) -> String? {
-        
-        guard let timeStamp = timeStamp else { return nil }
-        
+                
         let timeInterval = TimeInterval(timeStamp)
         
         let date = Date(timeIntervalSince1970: timeInterval)

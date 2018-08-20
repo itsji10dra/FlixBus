@@ -29,12 +29,12 @@ class RouteInfoTests: XCTestCase {
         //--------- Case 1 ---------//
         var routeJSONString = "{\"id\":548,\"name\":\"New Delhi\",\"address\":\"India\",\"coordinates\":{\"latitude\":12.32434,\"longitude\":43.32323}}"
         
-        guard let route1 = Mapper<RouteInfo>().map(JSONString: routeJSONString) else {
+        guard let route1 = Mapper<Station>().map(JSONString: routeJSONString) else {
             XCTAssert(true, "Nil Values Found")
             return
         }
         
-        XCTAssertEqual(route1.routeId, 548)
+        XCTAssertEqual(route1.id, 548)
         XCTAssertEqual(route1.name, "New Delhi")
         XCTAssertEqual(route1.address, "India")
         XCTAssertEqual(route1.coordinates?.latitude, 12.32434)
@@ -43,12 +43,12 @@ class RouteInfoTests: XCTestCase {
         //--------- Case 2 ---------//
         routeJSONString = "{\"id\":986782,\"full_address\":\"India\",\"coordinates\":{\"latitude\":12.32434}}"
         
-        guard let route2 = Mapper<RouteInfo>().map(JSONString: routeJSONString) else {
+        guard let route2 = Mapper<Station>().map(JSONString: routeJSONString) else {
             XCTAssert(true, "Nil Values Found")
             return
         }
         
-        XCTAssertEqual(route2.routeId, 986782)
+        XCTAssertEqual(route2.id, 986782)
         XCTAssertNil(route2.name)
         XCTAssertNil(route2.address)
         XCTAssertEqual(route2.fullAddress, "India")

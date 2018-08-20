@@ -4,9 +4,6 @@ inhibit_all_warnings!
 
 target 'FlixBus' do
 
-  #Data
-  pod 'ObjectMapper', '~> 3.1'
-
   #React
   pod 'RxSwift',    '~> 4.0'
   pod 'RxCocoa',    '~> 4.0'

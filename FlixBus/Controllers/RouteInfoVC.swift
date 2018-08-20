@@ -16,7 +16,7 @@ class RouteInfoVC: UIViewController {
 
     // MARK: - Data
     
-    internal var timeTableInfo: TimeTableInfo?
+    internal var timeTableInfo: RideInfo?
     
     // MARK: - View Hierarchy
 
@@ -33,7 +33,7 @@ class RouteInfoVC: UIViewController {
         
         let defaultTitle = "Routes"
         
-        guard let date = timeTableInfo?.dateTimeInfo else {
+        guard let date = timeTableInfo?.dateTime else {
             self.title = defaultTitle
             return
         }
@@ -64,7 +64,7 @@ class RouteInfoVC: UIViewController {
     
     private func loadRoutes() {
         
-        guard let routes = timeTableInfo?.routeInfo else { return }
+        guard let routes = timeTableInfo?.route else { return }
 
         routes.forEach { route in
             let view = RouteInfoView()

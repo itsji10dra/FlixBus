@@ -58,7 +58,7 @@ class RouteInfoView: UIView {
     
     // MARK: - Internal Methods
     
-    internal func loadData(from route: RouteInfo) {
+    internal func loadData(from route: Station) {
         
         nameLabel.text = route.name
         addressLabel.text = route.fullAddress

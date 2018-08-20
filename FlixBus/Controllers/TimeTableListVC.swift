@@ -19,9 +19,9 @@ private struct JourneyTimeTableInfo {
     
     var journeyType: JourneyType
     
-    var timeTableData: [TimeTableInfo]
+    var timeTableData: [RideInfo]
     
-    init(journeyType: JourneyType, timeTableData: [TimeTableInfo]) {
+    init(journeyType: JourneyType, timeTableData: [RideInfo]) {
         self.journeyType = journeyType
         self.timeTableData = timeTableData
     }
@@ -35,12 +35,12 @@ extension JourneyTimeTableInfo: AnimatableSectionModelType {
     }
     
     // Items declare data for section rows
-    typealias Item = TimeTableInfo
-    var items: [TimeTableInfo] {
+    typealias Item = RideInfo
+    var items: [RideInfo] {
         return timeTableData
     }
     
-    init(original: JourneyTimeTableInfo, items: [TimeTableInfo]) {
+    init(original: JourneyTimeTableInfo, items: [RideInfo]) {
         self = original
         self.timeTableData = items
     }
@@ -63,7 +63,7 @@ class TimeTableListVC: UIViewController, UITableViewDelegate {
         
     // MARK: - Rx
     
-    private lazy var journeyInfoData: [JourneyType: [TimeTableInfo]] = [:]
+    private lazy var journeyInfoData: [JourneyType: [RideInfo]] = [:]
     
     private var dataSource = PublishSubject<[JourneyTimeTableInfo]>()
 
@@ -92,10 +92,10 @@ class TimeTableListVC: UIViewController, UITableViewDelegate {
 
         LoadingIndicator.startAnimating()
         
-        RxAlamofire.requestJSON(.get, urlString, headers: headers)
+        RxAlamofire.requestData(.get, urlString, headers: headers)
             .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { [weak self] (_, json) in
-                let data = TimeTableInfo.parse(json)
+            .subscribe(onNext: { [weak self] (_, data) in
+                let data = RideInfo.parse(data)
                 self?.journeyInfoData = data
                 self?.updateDataSourceForDefaultPreference()
             }, onError: { [weak self] error in
@@ -221,7 +221,7 @@ class TimeTableListVC: UIViewController, UITableViewDelegate {
             .disposed(by: disposeBag)
 
         self.detailsTableView.rx
-            .modelSelected(TimeTableInfo.self)
+            .modelSelected(RideInfo.self)
             .subscribe(onNext:  { [weak self] timeTableInfo in
                 self?.showRouteInfo(with: timeTableInfo)
             })
@@ -230,7 +230,7 @@ class TimeTableListVC: UIViewController, UITableViewDelegate {
     
     // MARK: - Navigation
     
-    private func showRouteInfo(with timeTable: TimeTableInfo) {
+    private func showRouteInfo(with timeTable: RideInfo) {
         
         guard let routeInfoVC = Navigation.getViewController(type: RouteInfoVC.self, identifer: "RouteInfo") else { return }
         

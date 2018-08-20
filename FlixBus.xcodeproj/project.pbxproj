@@ -8,17 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		08BF7D68B7F830F7CA0CEF61 /* Pods_FlixBusUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B89357640EB6437DF311562E /* Pods_FlixBusUITests.framework */; };
-		101D3216206CAEBB0038DAD7 /* RouteInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101D3215206CAEBB0038DAD7 /* RouteInfo.swift */; };
 		101D3218206CB5CA0038DAD7 /* RouteInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101D3217206CB5CA0038DAD7 /* RouteInfoVC.swift */; };
 		101D321A206CB7D30038DAD7 /* RouteInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101D3219206CB7D30038DAD7 /* RouteInfoView.swift */; };
 		101D321C206CB7DE0038DAD7 /* RouteInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 101D321B206CB7DE0038DAD7 /* RouteInfoView.xib */; };
 		101D321F206CB8AD0038DAD7 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101D321E206CB8AD0038DAD7 /* UIView+Extension.swift */; };
 		101D3222206CC14E0038DAD7 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101D3221206CC14E0038DAD7 /* Date+Extension.swift */; };
-		101D3226206CD6210038DAD7 /* Station+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101D3225206CD6210038DAD7 /* Station+JSON.swift */; };
 		101D322A206CE8250038DAD7 /* Station.plist in Resources */ = {isa = PBXBuildFile; fileRef = 101D3229206CE8250038DAD7 /* Station.plist */; };
 		101D322C206CEADD0038DAD7 /* ParsingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101D322B206CEADD0038DAD7 /* ParsingHelper.swift */; };
 		101D322F206CF2630038DAD7 /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101D322E206CF2630038DAD7 /* Preference.swift */; };
 		1054B49E20703FA7008184E0 /* TimeZoneService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1054B49D20703FA7008184E0 /* TimeZoneService.swift */; };
+		105E3B54212B222400D91C15 /* TimeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105E3B53212B222400D91C15 /* TimeTable.swift */; };
+		105E3B56212B22CD00D91C15 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105E3B55212B22CD00D91C15 /* Response.swift */; };
 		1062771E206E3010009AB6A9 /* ParsingHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1062771D206E3010009AB6A9 /* ParsingHelperTests.swift */; };
 		10627720206E33E2009AB6A9 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 1062771F206E33E2009AB6A9 /* test.json */; };
 		10855899206BED1E00601CF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10855898206BED1E00601CF7 /* AppDelegate.swift */; };
@@ -37,11 +37,11 @@
 		10CC62742070273D00D165E5 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CC62732070273D00D165E5 /* Coordinates.swift */; };
 		10CC6276207027D100D165E5 /* RouteInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CC6275207027D100D165E5 /* RouteInfoTests.swift */; };
 		10D4FE67206C1AAE00C22937 /* TimeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D4FE66206C1AAE00C22937 /* TimeTableCell.swift */; };
-		10D4FE69206C240F00C22937 /* TimeTableInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D4FE68206C240F00C22937 /* TimeTableInfo.swift */; };
-		10D4FE6B206C2C4C00C22937 /* TimeTableInfo+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D4FE6A206C2C4C00C22937 /* TimeTableInfo+JSON.swift */; };
+		10D4FE69206C240F00C22937 /* RideInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D4FE68206C240F00C22937 /* RideInfo.swift */; };
+		10D4FE6B206C2C4C00C22937 /* RideInfo+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D4FE6A206C2C4C00C22937 /* RideInfo+JSON.swift */; };
 		10D4FE6D206C2CBF00C22937 /* JourneyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D4FE6C206C2CBF00C22937 /* JourneyType.swift */; };
 		10D4FE6F206C307700C22937 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D4FE6E206C307700C22937 /* LoadingIndicator.swift */; };
-		10D4FE71206C351F00C22937 /* TimeTableInfo+RxDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D4FE70206C351F00C22937 /* TimeTableInfo+RxDataSource.swift */; };
+		10D4FE71206C351F00C22937 /* RideInfo+RxDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D4FE70206C351F00C22937 /* RideInfo+RxDataSource.swift */; };
 		458C62D71D3479AD3A3DF37B /* Pods_FlixBus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9678A147E5A3E7504A2B1C7 /* Pods_FlixBus.framework */; };
 		925AD3A5D9C61315A4857D6B /* Pods_FlixBusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 450CDBBC5C5846269A948D8A /* Pods_FlixBusTests.framework */; };
 /* End PBXBuildFile section */
@@ -64,17 +64,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		101D3215206CAEBB0038DAD7 /* RouteInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteInfo.swift; sourceTree = "<group>"; };
 		101D3217206CB5CA0038DAD7 /* RouteInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteInfoVC.swift; sourceTree = "<group>"; };
 		101D3219206CB7D30038DAD7 /* RouteInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteInfoView.swift; sourceTree = "<group>"; };
 		101D321B206CB7DE0038DAD7 /* RouteInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RouteInfoView.xib; sourceTree = "<group>"; };
 		101D321E206CB8AD0038DAD7 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		101D3221206CC14E0038DAD7 /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
-		101D3225206CD6210038DAD7 /* Station+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Station+JSON.swift"; sourceTree = "<group>"; };
 		101D3229206CE8250038DAD7 /* Station.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Station.plist; sourceTree = "<group>"; };
 		101D322B206CEADD0038DAD7 /* ParsingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsingHelper.swift; sourceTree = "<group>"; };
 		101D322E206CF2630038DAD7 /* Preference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
 		1054B49D20703FA7008184E0 /* TimeZoneService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneService.swift; sourceTree = "<group>"; };
+		105E3B53212B222400D91C15 /* TimeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTable.swift; sourceTree = "<group>"; };
+		105E3B55212B22CD00D91C15 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		1062771D206E3010009AB6A9 /* ParsingHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsingHelperTests.swift; sourceTree = "<group>"; };
 		1062771F206E33E2009AB6A9 /* test.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
 		10855895206BED1E00601CF7 /* FlixBus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlixBus.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,11 +99,11 @@
 		10CC62732070273D00D165E5 /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
 		10CC6275207027D100D165E5 /* RouteInfoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteInfoTests.swift; sourceTree = "<group>"; };
 		10D4FE66206C1AAE00C22937 /* TimeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableCell.swift; sourceTree = "<group>"; };
-		10D4FE68206C240F00C22937 /* TimeTableInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableInfo.swift; sourceTree = "<group>"; };
-		10D4FE6A206C2C4C00C22937 /* TimeTableInfo+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeTableInfo+JSON.swift"; sourceTree = "<group>"; };
+		10D4FE68206C240F00C22937 /* RideInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideInfo.swift; sourceTree = "<group>"; };
+		10D4FE6A206C2C4C00C22937 /* RideInfo+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RideInfo+JSON.swift"; sourceTree = "<group>"; };
 		10D4FE6C206C2CBF00C22937 /* JourneyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyType.swift; sourceTree = "<group>"; };
 		10D4FE6E206C307700C22937 /* LoadingIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
-		10D4FE70206C351F00C22937 /* TimeTableInfo+RxDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeTableInfo+RxDataSource.swift"; sourceTree = "<group>"; };
+		10D4FE70206C351F00C22937 /* RideInfo+RxDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RideInfo+RxDataSource.swift"; sourceTree = "<group>"; };
 		113198FAD163CC58D2D0BA70 /* Pods-FlixBus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlixBus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlixBus/Pods-FlixBus.debug.xcconfig"; sourceTree = "<group>"; };
 		450CDBBC5C5846269A948D8A /* Pods_FlixBusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlixBusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FFF110BB8DFC7350F80C74 /* Pods-FlixBusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlixBusTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlixBusTests/Pods-FlixBusTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -180,23 +180,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		101D3227206CD6260038DAD7 /* Station */ = {
+		101D3228206CD62E0038DAD7 /* RideInfo */ = {
 			isa = PBXGroup;
 			children = (
-				108558CC206BF27500601CF7 /* Station.swift */,
-				101D3225206CD6210038DAD7 /* Station+JSON.swift */,
+				10D4FE68206C240F00C22937 /* RideInfo.swift */,
+				10D4FE6A206C2C4C00C22937 /* RideInfo+JSON.swift */,
+				10D4FE70206C351F00C22937 /* RideInfo+RxDataSource.swift */,
 			);
-			path = Station;
-			sourceTree = "<group>";
-		};
-		101D3228206CD62E0038DAD7 /* TimeTable */ = {
-			isa = PBXGroup;
-			children = (
-				10D4FE68206C240F00C22937 /* TimeTableInfo.swift */,
-				10D4FE6A206C2C4C00C22937 /* TimeTableInfo+JSON.swift */,
-				10D4FE70206C351F00C22937 /* TimeTableInfo+RxDataSource.swift */,
-			);
-			path = TimeTable;
+			path = RideInfo;
 			sourceTree = "<group>";
 		};
 		101D322D206CED650038DAD7 /* Helper */ = {
@@ -296,13 +287,14 @@
 		108558CB206BF20F00601CF7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				10D4FE6C206C2CBF00C22937 /* JourneyType.swift */,
-				101D322E206CF2630038DAD7 /* Preference.swift */,
-				101D3227206CD6260038DAD7 /* Station */,
-				101D3228206CD62E0038DAD7 /* TimeTable */,
-				101D3215206CAEBB0038DAD7 /* RouteInfo.swift */,
+				105E3B55212B22CD00D91C15 /* Response.swift */,
+				105E3B53212B222400D91C15 /* TimeTable.swift */,
+				108558CC206BF27500601CF7 /* Station.swift */,
+				101D3228206CD62E0038DAD7 /* RideInfo */,
 				10CC62712070271800D165E5 /* DateTime.swift */,
 				10CC62732070273D00D165E5 /* Coordinates.swift */,
+				10D4FE6C206C2CBF00C22937 /* JourneyType.swift */,
+				101D322E206CF2630038DAD7 /* Preference.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -346,7 +338,6 @@
 				10855892206BED1E00601CF7 /* Frameworks */,
 				10855893206BED1E00601CF7 /* Resources */,
 				E25E09261D7802DEA03D0EF1 /* [CP] Embed Pods Frameworks */,
-				44D71034AC020AB14522178F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -365,8 +356,6 @@
 				108558A5206BED1F00601CF7 /* Sources */,
 				108558A6206BED1F00601CF7 /* Frameworks */,
 				108558A7206BED1F00601CF7 /* Resources */,
-				6591AD6BB234250B8167228D /* [CP] Embed Pods Frameworks */,
-				842059FE12F121CBBFE618E9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -386,8 +375,6 @@
 				108558B0206BED1F00601CF7 /* Sources */,
 				108558B1206BED1F00601CF7 /* Frameworks */,
 				108558B2206BED1F00601CF7 /* Resources */,
-				41BB24A7499B847E8D6E86D4 /* [CP] Embed Pods Frameworks */,
-				EFD1C2B0B32466E43C3AD90C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -476,36 +463,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		41BB24A7499B847E8D6E86D4 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlixBusUITests/Pods-FlixBusUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		44D71034AC020AB14522178F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlixBus/Pods-FlixBus-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		5AAEA5109DBC0BA3D06ADC91 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -522,36 +479,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6591AD6BB234250B8167228D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlixBusTests/Pods-FlixBusTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		842059FE12F121CBBFE618E9 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlixBusTests/Pods-FlixBusTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B95494B88610A6ACBEE6CA67 /* [CP] Check Pods Manifest.lock */ = {
@@ -582,7 +509,6 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
@@ -593,7 +519,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
@@ -602,21 +527,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlixBus/Pods-FlixBus-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EFD1C2B0B32466E43C3AD90C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlixBusUITests/Pods-FlixBusUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F06E3D543D8AE661A9C801F5 /* [CP] Check Pods Manifest.lock */ = {
@@ -645,26 +555,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				1054B49E20703FA7008184E0 /* TimeZoneService.swift in Sources */,
-				10D4FE71206C351F00C22937 /* TimeTableInfo+RxDataSource.swift in Sources */,
+				10D4FE71206C351F00C22937 /* RideInfo+RxDataSource.swift in Sources */,
 				10D4FE6F206C307700C22937 /* LoadingIndicator.swift in Sources */,
 				101D321F206CB8AD0038DAD7 /* UIView+Extension.swift in Sources */,
+				105E3B54212B222400D91C15 /* TimeTable.swift in Sources */,
 				101D3218206CB5CA0038DAD7 /* RouteInfoVC.swift in Sources */,
 				10855899206BED1E00601CF7 /* AppDelegate.swift in Sources */,
 				108558CF206BF2FC00601CF7 /* Configuration.swift in Sources */,
 				101D321A206CB7D30038DAD7 /* RouteInfoView.swift in Sources */,
 				10CC62742070273D00D165E5 /* Coordinates.swift in Sources */,
-				10D4FE69206C240F00C22937 /* TimeTableInfo.swift in Sources */,
-				101D3226206CD6210038DAD7 /* Station+JSON.swift in Sources */,
+				10D4FE69206C240F00C22937 /* RideInfo.swift in Sources */,
 				108558C7206BEDC600601CF7 /* StationsListVC.swift in Sources */,
 				101D322F206CF2630038DAD7 /* Preference.swift in Sources */,
 				101D3222206CC14E0038DAD7 /* Date+Extension.swift in Sources */,
 				10D4FE67206C1AAE00C22937 /* TimeTableCell.swift in Sources */,
 				108558D2206C001C00601CF7 /* Navigation.swift in Sources */,
 				10D4FE6D206C2CBF00C22937 /* JourneyType.swift in Sources */,
-				101D3216206CAEBB0038DAD7 /* RouteInfo.swift in Sources */,
 				101D322C206CEADD0038DAD7 /* ParsingHelper.swift in Sources */,
 				108558CD206BF27500601CF7 /* Station.swift in Sources */,
-				10D4FE6B206C2C4C00C22937 /* TimeTableInfo+JSON.swift in Sources */,
+				10D4FE6B206C2C4C00C22937 /* RideInfo+JSON.swift in Sources */,
+				105E3B56212B22CD00D91C15 /* Response.swift in Sources */,
 				10CC62722070271800D165E5 /* DateTime.swift in Sources */,
 				108558C9206BF1F700601CF7 /* TimeTableListVC.swift in Sources */,
 			);

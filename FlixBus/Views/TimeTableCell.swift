@@ -29,14 +29,14 @@ class TimeTableCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure(data: TimeTableInfo) {
+    func configure(data: RideInfo) {
         
-        let time = data.dateTimeInfo?.getLocalTime(.HH_colon_mm_line_dd_space_MMM_comma_space_yy)
+        let time = data.dateTime.getLocalTime(.HH_colon_mm_line_dd_space_MMM_comma_space_yy)
         self.timeLabel.text = time?.trimmingCharacters(in: .whitespacesAndNewlines)
         
-        let lineInfoText = "Line " + (data.lineCode ?? "") + " direction " + (data.direction ?? "")
+        let lineInfoText = "Line " + data.lineCode + " direction " + data.direction
         self.lineInfoLabel.text = lineInfoText.trimmingCharacters(in: .whitespacesAndNewlines)
         
-        self.throughStationsLabel.text = "to " + (data.throughStations ?? "")
+        self.throughStationsLabel.text = "to " + data.throughStations
     }
 }

@@ -6,23 +6,10 @@
 //  Copyright © 2018 Jitendra Gandhi. All rights reserved.
 //
 
-import ObjectMapper
-
-struct Coordinates: Mappable {
+struct Coordinates: Decodable {
     
     var latitude: Double?
     
     var longitude: Double?
-    
-    // MARK: - Mappable
-    
-    init?(map: Map) {
-        
-    }
-    
-    mutating func mapping(map: Map) {
-        latitude        <- map["latitude"]
-        longitude       <- map["longitude"]
-    }
 }
 

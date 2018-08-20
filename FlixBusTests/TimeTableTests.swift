@@ -29,7 +29,7 @@ class TimeTableTests: XCTestCase {
         //--------- Case 1 ---------//
         var timeTableJSONString = "{\"trip_uid\":\"548\",\"through_the_stations\":\"ABC->XYZ\",\"line_code\":\"L647\",\"direction\":\"South\",\"datetime\":{\"timestamp\":12345321,\"tz\":\"GMT +02:00\"}}"
         
-        guard let timeTable1 = Mapper<TimeTableInfo>().map(JSONString: timeTableJSONString) else {
+        guard let timeTable1 = Mapper<RideInfo>().map(JSONString: timeTableJSONString) else {
             XCTAssert(true, "Nil Values Found")
             return
         }
@@ -38,17 +38,17 @@ class TimeTableTests: XCTestCase {
         XCTAssertEqual(timeTable1.throughStations, "ABC->XYZ")
         XCTAssertEqual(timeTable1.lineCode, "L647")
         XCTAssertEqual(timeTable1.direction, "South")
-        XCTAssertNotNil(timeTable1.dateTimeInfo)
+        XCTAssertNotNil(timeTable1.dateTime)
         
         //--------- Case 2 ---------//
         let expectedDate = Date(timeIntervalSince1970: 12345321)
         let expectedDateString = Date.string(from: expectedDate, format: .dd_space_MMM_comma_space_yy_space_I_space_EE)
-        let receivedDateString = timeTable1.dateTimeInfo?.getLocalTime(.dd_space_MMM_comma_space_yy_space_I_space_EE)
+        let receivedDateString = timeTable1.dateTime?.getLocalTime(.dd_space_MMM_comma_space_yy_space_I_space_EE)
         XCTAssertEqual(expectedDateString, receivedDateString)
         
         timeTableJSONString = "{\"trip_uid\":\"8644362892\",\"line_code\":\"L667\",\"direction\":\"North\",\"route\":[]}"
         
-        guard let timeTable2 = Mapper<TimeTableInfo>().map(JSONString: timeTableJSONString) else {
+        guard let timeTable2 = Mapper<RideInfo>().map(JSONString: timeTableJSONString) else {
             XCTAssert(true, "Nil Values Found")
             return
         }

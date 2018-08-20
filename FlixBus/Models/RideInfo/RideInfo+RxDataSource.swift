@@ -1,5 +1,5 @@
 //
-//  TimeTableInfo+RxDataSource.swift
+//  RideInfo+RxDataSource.swift
 //  FlixBus
 //
 //  Created by Jitendra on 29/03/18.
@@ -8,15 +8,16 @@
 
 import RxDataSources
 
-extension TimeTableInfo: IdentifiableType, Equatable {
+extension RideInfo: IdentifiableType, Equatable {
     
     // Identify is uniquely define an object
     typealias Identity = String
+    
     var identity: String {
-        return tripId ?? ""
+        return id
     }
     
-    static func ==(lhs: TimeTableInfo, rhs: TimeTableInfo) -> Bool {
-        return lhs.tripId == rhs.tripId
+    static func ==(lhs: RideInfo, rhs: RideInfo) -> Bool {
+        return lhs.id == rhs.id
     }
 }
