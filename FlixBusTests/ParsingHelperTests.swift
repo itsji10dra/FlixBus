@@ -15,61 +15,13 @@ class ParsingHelperTests: XCTestCase {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
         
-        testGetJSONString()
-        testReplaceParameters()
     }
     
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
-    func testGetJSONString() {
         
-        let bundle = Bundle(for: type(of: self))
-        
-        XCTAssertNotNil(bundle)
-        
-        guard let path = bundle.path(forResource: "test", ofType: "json"),
-            let data = FileManager.default.contents(atPath: path),
-            let json = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) else { return }
-        
-        XCTAssertTrue(JSONSerialization.isValidJSONObject(json))
-        
-        let expectedJsonString = """
-{
-  "glossary" : {
-    "title" : "example glossary",
-    "GlossDiv" : {
-      "title" : "S",
-      "GlossList" : {
-        "GlossEntry" : {
-          "SortAs" : "SGML",
-          "Abbrev" : "ISO 8879:1986",
-          "GlossTerm" : "Standard Generalized Markup Language",
-          "GlossDef" : {
-            "GlossSeeAlso" : [
-              "GML",
-              "XML"
-            ],
-            "para" : "A meta-markup language, used to create markup languages such as DocBook."
-          },
-          "GlossSee" : "markup",
-          "ID" : "SGML",
-          "Acronym" : "SGML"
-        }
-      }
-    }
-  }
-}
-"""
-
-        guard let jsonDictionary = json as? [String: AnyObject],
-            let jsonString = ParsingHelper.getJSONString(dictionary: jsonDictionary) else { return }
-        
-        XCTAssertEqual(jsonString, expectedJsonString)
-    }
-    
     func testReplaceParameters() {
 
         //--------- Case 1 ---------//
